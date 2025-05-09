@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {!authenticated ? (
           <Splash />
@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
           <>
             <Header />
             {children}
-          {/*   <Footer /> */}
+            {/*   <Footer /> */}
           </>
         )}
       </body>
