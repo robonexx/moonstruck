@@ -21,7 +21,7 @@ const AnimatedCraze = () => {
             restDelta: 0.005,
           }}
         >
-          They
+          Souls
         </motion.h2>{' '}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -37,7 +37,7 @@ const AnimatedCraze = () => {
             bounce: 0.25,
           }}
         >
-          connected
+          united
         </motion.h2>
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -53,7 +53,7 @@ const AnimatedCraze = () => {
             bounce: 0.25,
           }}
         >
-          under
+          beneath
         </motion.h2>
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -85,7 +85,7 @@ const AnimatedCraze = () => {
             bounce: 0.3,
           }}
         >
-          fullmoon
+          moon
         </motion.h2>
       </div>
     </>
