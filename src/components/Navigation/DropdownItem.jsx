@@ -1,24 +1,14 @@
-'use client'
+'use client';
 import React, { useState, useEffect, useCallback, CSSProperties } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './DropDown.module.scss';
 
-interface DropDownItemProps {
-  title: string;
-  url: string;
-  icon: React.ReactNode;
-    children?: React.ReactNode;
-    style?: CSSProperties;
-}
-
-const DropDownItem: React.FC<DropDownItemProps> = (props) => {
-  const [click, setClick] = useState<boolean>(false);
-
+const DropDownItem = (props) => {
+  const [click, setClick] = useState(false);
 
   const closeMobileMenu = useCallback(() => {
     setClick(false);
   }, []);
-
 
   return (
     <li className={styles.dropdown_item}>

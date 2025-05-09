@@ -48,28 +48,6 @@
             mix-blend-mode: darken;
     }
 
-    &.degaming {
-        width: 220px;
-        height: 220px;
-        border-radius: 10px;
-            mask-image: url('/degaming.svg');
-            mask-repeat: no-repeat;
-            mask-size: 220px;
-            background: var(--primary);
-            color: black;
-    }
-
-    &.casinox {
-      width: 120px;
-      height: 46px;
-      border-radius: 0px;
-      background-image: url('/casin0x_logo.png');
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: center center;
-      background-color: transparent;
-  }
-
     &.mask2 {
         width: 220px;
         height: 220px;
@@ -103,26 +81,6 @@
         background: #000000;
       }
 
-      &.crypto {
-        width: 120px;
-        height: 120px;
-        background-image: url('/xdc.png');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center center;
-       
-      }
-
-      &.crypto2 {
-        width: 120px;
-        height: 120px;
-        background-image: url('/mUSDT.png');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100%;
-        object-fit: cover;
-        
-      }
 
     &.xlarge {
         width: 220px;

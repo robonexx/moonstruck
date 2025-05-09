@@ -4,6 +4,7 @@ import AnimatedCraze from '@/components/AnimationCraze';
 import TheDrop from '@/components/AnimationCraze/TheDrop';
 import WaterDrop from '@/components/WaterDrop';
 import { motion, AnimatePresence } from 'framer-motion';
+import Fullmoon from '../AnimationCraze/fullmoon';
 
 const Splash = () => {
   const [showLoadingSection, setShowLoadingSection] = useState(true);
@@ -34,7 +35,7 @@ const Splash = () => {
   };
 
   return (
-    <div className='w-full h-screen overflow-hidden p-40'>
+    <div className='w-full max-h-screen overflow-hidden p-40 relative'>
       <AnimatePresence mode='wait'>
         {showLoadingSection && (
           <motion.section
@@ -43,6 +44,7 @@ const Splash = () => {
             exit={{ opacity: 0 }}
             transition={{ exit: { delay: 6 } }}
           >
+            <Fullmoon />
             <TheDrop />
             <AnimatedCraze />
             <WaterDrop />
@@ -55,7 +57,7 @@ const Splash = () => {
             type='password'
             value={password}
             onChange={handlePasswordChange}
-            className='border px-4 py-2 border-r-2 rounded mb-4'
+            className='border px-4 py-2 border-r-2 rounded mb-4 text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
             placeholder='Enter Password'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

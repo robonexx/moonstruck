@@ -21,7 +21,7 @@ import { WiTrain } from 'react-icons/wi';
 import { FiMusic } from 'react-icons/fi';
 import { FaRecordVinyl } from 'react-icons/fa';
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <div className={styles.header}>
       <Topbar />

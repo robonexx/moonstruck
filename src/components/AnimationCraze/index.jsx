@@ -13,7 +13,7 @@ const AnimatedCraze = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.6,
-            delay: 2.5,
+            delay: 2,
             ease: 'easeInOut',
             type: 'spring',
             damping: 10,
@@ -21,7 +21,7 @@ const AnimatedCraze = () => {
             restDelta: 0.005,
           }}
         >
-          Our
+          They
         </motion.h2>{' '}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -37,7 +37,7 @@ const AnimatedCraze = () => {
             bounce: 0.25,
           }}
         >
-          connection 
+          connected
         </motion.h2>
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -53,7 +53,7 @@ const AnimatedCraze = () => {
             bounce: 0.25,
           }}
         >
-          was
+          under
         </motion.h2>
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -69,7 +69,7 @@ const AnimatedCraze = () => {
             bounce: 0.25,
           }}
         >
-          being
+          the
         </motion.h2>
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -85,7 +85,7 @@ const AnimatedCraze = () => {
             bounce: 0.3,
           }}
         >
-          made
+          fullmoon
         </motion.h2>
       </div>
     </>

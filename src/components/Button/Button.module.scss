@@ -1,0 +1,98 @@
+/* CustomButton.module.css */
+.button {
+  position: relative;
+    display: inline-block;
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 16px;
+    transition: all 0.3s ease-in-out;
+    margin: 1rem 0;
+    pointer-events: auto;
+    cursor: pointer;
+
+    z-index: 10;
+
+    > a {
+      text-decoration: none;
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+    }
+  }
+  
+  .small {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .medium {
+    font-size: 16px;
+  }
+  
+  .large {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+  
+  .rounded5px {
+    border-radius: 5px;
+  }
+  
+  .rounded10px {
+    border-radius: 10px;
+  }
+  
+  .roundedFull {
+    border-radius: 100%;
+  }
+  
+  .filled {
+    background-color: var(--primary);
+    color: #000000;
+    border: 1px solid transparent;
+
+    &:hover {
+     /*  background-color: lighten(#ffffff, 10%); */
+      filter: invert(1);
+    }
+
+    &:focus,
+  &:active {
+    background-color: lighten(#ffffff, 15%);
+  }
+  }
+  
+  .outlined {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid var(--primary);
+
+     /* Hover effect */
+  &:hover {
+    cursor: pointer;
+    pointer-events: all;
+    background-color: var(--primary) !important;
+  }
+  
+  /* Active and Focus states */
+  &:focus,
+  &:active {
+    background-color: var(--primary);
+  }
+  }
+  
+  /* Hover effect */
+ /*  .button:hover {
+    background-color: lighten(var(--primary), 10%);
+  } */
+  
+  /* Active and Focus states */
+ /*  .button:focus,
+  .button:active {
+    background-color: lighten(#ffffff, 15%);
+  } */
+  

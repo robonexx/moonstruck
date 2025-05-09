@@ -1,16 +1,15 @@
 'use client';
-''
 
 import React, { useContext, useRef, useEffect } from 'react';
 import { CursorContext } from './CursorProvider';
 import './style.scss';
 
-const CustomCursor: React.FC = () => {
-  const secondaryCursor = useRef<HTMLDivElement>(null); 
+const CustomCursor = () => {
+  const secondaryCursor = useRef(null); 
   const { size } = useContext(CursorContext);
 
   useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
+    const handleMouseMove = (event) => {
       if (secondaryCursor.current) {
         // Check if secondaryCursor.current is not null
         const { clientX, clientY } = event;

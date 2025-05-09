@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import styles from './TheDrop.module.scss';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -25,8 +25,8 @@ const TheDrop = () => {
           exit={{ opacity: 0 }}
           transition={{
             duration: 2,
-              delay: 0,
-              ease: 'easeInOut',
+            delay: 0,
+            ease: 'easeInOut',
           }}
         >
           <motion.svg
@@ -68,7 +68,7 @@ const TheDrop = () => {
             />
             <motion.path
               d='M27.7577 14.841C27.2198 14.174 26.7076 13.5603 26.2465 13C25.7855 13.587 25.2732 14.2006 24.7353 14.841C21.4824 18.7364 17 24.1526 17 28.3682C17 31.0363 18.0245 33.4376 19.715 35.1718C21.3799 36.9061 23.6852 38 26.2465 38C28.8079 38 31.1131 36.9328 32.778 35.1718C34.4429 33.4376 35.493 31.0096 35.493 28.3682C35.493 24.1526 31.0107 18.7631 27.7577 14.841Z'
-              fill='#1B302F'
+              fill='#e9ebeb'
               initial={{ y: -100, opacity: 0, height: 51 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ opacity: 0 }}

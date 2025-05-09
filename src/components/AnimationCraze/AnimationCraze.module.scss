@@ -1,5 +1,8 @@
 .lh {
-  position: relative;
+  padding-top: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +34,7 @@
   h2 {
     font-weight: 300;
     color: #d9fff0;
-    font-size: 1.742rem;
+    font-size: 1.25rem;
     line-height: 0;
 
     @media (min-width: 768px) {

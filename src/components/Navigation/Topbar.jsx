@@ -45,7 +45,7 @@ const Topbar = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.3 }}
       >
-        <a href='/contact'>Contact</a>
+        <a href='/'>ET phone home</a>
       </motion.button>
     </div>
   );

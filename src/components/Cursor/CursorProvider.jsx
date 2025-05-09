@@ -30,28 +30,22 @@ export default function CursorProvider({ children }: Props) {
 
 import React, { createContext, useState, ReactNode } from "react";
 
-interface CursorContextType {
-  size: string;
-  setSize: (size: string) => void;
-}
 
-export const CursorContext = createContext<CursorContextType>({
+
+export const CursorContext = createContext({
   size: "small",
   setSize: () => {},
 });
 
-interface CursorProviderProps {
-  children: ReactNode;
-}
 
-const CursorProvider: React.FC<CursorProviderProps> = (props) => {
-  const [size, setSize] = useState<string>("small");
+const CursorProvider = (props) => {
+  const [size, setSize] = useState("small");
 
-  const updateSize = (newSize: string) => {
+  const updateSize = (newSize) => {
     setSize(newSize);
   };
 
-  const contextValue: CursorContextType = {
+  const contextValue = {
     size,
     setSize: updateSize,
   };
