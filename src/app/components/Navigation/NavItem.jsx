@@ -1,19 +1,11 @@
 'use client'
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './Navbar.module.scss';
 
-interface NavItemProps {
-  title: string;
-  url: string;
-  icon: React.ReactNode;
-  children?: React.ReactNode;
-}
-
-const NavItem: React.FC<NavItemProps> = (props) => {
-  const [click, setClick] = useState<boolean>(false);
-  const [dropdown, setDropdown] = useState<boolean>(false);
+const NavItem= (props) => {
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const onMouseEnter = () => {
     if (window.innerWidth < 300) {

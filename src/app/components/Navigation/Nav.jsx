@@ -7,15 +7,12 @@ import NavBtn from './NavBtn';
 import styles from './Navbar.module.scss';
 import { CursorContext } from '@/components/Cursor/CursorProvider';
 
-interface NavProps {
-  children: React.ReactNode;
-}
 
-const Nav: React.FC<NavProps> = (props) => {
-  const [click, setClick] = useState<boolean>(false);
-  const [navActive, setNavActive] = useState<boolean>(false);
-  const navRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+const Nav = (props) => {
+  const [click, setClick] = useState(false);
+  const [navActive, setNavActive] = useState(false);
+  const navRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   const { setSize } = useContext(CursorContext);
 
   const handleClick = () => {
@@ -61,7 +58,7 @@ const Nav: React.FC<NavProps> = (props) => {
 
   const variants = {
     hidden: { opacity: 0, x: 50 },
-    visible: (i: number) => ({
+    visible: (i) => ({
       opacity: 1,
       x: 0,
       transition: {

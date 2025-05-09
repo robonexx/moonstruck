@@ -7,10 +7,9 @@ import { motion } from 'framer-motion';
 // styles
 import styles from './TopMenu.module.scss';
 
-// Define the type for the props, if necessary
-interface TopMenuProps {}
 
-const Topbar: React.FC<TopMenuProps> = () => {
+
+const Topbar = () => {
   const { setSize } = useContext(CursorContext);
   return (
     <div className={styles.top_menu}>

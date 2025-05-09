@@ -1,0 +1,181 @@
+@import "../../styles/_mixins.scss";
+
+/* .secondary-cursor {
+  z-index: 1000;
+
+  position: fixed;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  background-color: #bdff00;
+  border-radius: 100%;
+} */
+
+.secondary-cursor {
+    z-index: 10000;
+    border-radius: 50%;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    position: fixed;
+  
+    background: white;
+    mix-blend-mode: difference;
+    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+
+    &.mask {
+        width: 220px;
+        height: 220px;
+            -webkit-mask-image: url('/mask.svg');
+            mask-image: url('/mask.svg');
+            -webkit-repeat: no-repeat;
+            -webkit-size: 220px;
+            size: 220px;
+            background: var(--primary);
+            color: black;
+    }
+
+    &.mask-burn {
+        width: 120px;
+        height: 120px;            
+            -webkit-mask-image: url('/mask.svg');
+            mask-image: url('/mask.svg');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 120px;
+            mask-size: 120px;
+            background: #f8f8f8;
+            mix-blend-mode: darken;
+    }
+
+    &.degaming {
+        width: 220px;
+        height: 220px;
+        border-radius: 10px;
+            mask-image: url('/degaming.svg');
+            mask-repeat: no-repeat;
+            mask-size: 220px;
+            background: var(--primary);
+            color: black;
+    }
+
+    &.casinox {
+      width: 120px;
+      height: 46px;
+      border-radius: 0px;
+      background-image: url('/casin0x_logo.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center center;
+      background-color: transparent;
+  }
+
+    &.mask2 {
+        width: 220px;
+        height: 220px;
+        -webkit-mask-image: url('/mask2.svg');
+        mask-image: url('/mask2.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        mask-size: 220px;
+        background: var(--primary);
+      }
+
+    &.mask3 {
+        width: 220px;
+        height: 220px;
+        -webkit-mask-image: url('/mask3.svg');
+        mask-image: url('/mask3.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        mask-size: 220px;
+        background: #000000;
+      }
+
+    &.mask4 {
+        width: 220px;
+        height: 220px;
+        -webkit-mask-image: url('/mask4.svg');
+        mask-image: url('/mask4.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        mask-size: 220px;
+        background: #000000;
+      }
+
+      &.crypto {
+        width: 120px;
+        height: 120px;
+        background-image: url('/xdc.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center center;
+       
+      }
+
+      &.crypto2 {
+        width: 120px;
+        height: 120px;
+        background-image: url('/mUSDT.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        object-fit: cover;
+        
+      }
+
+    &.xlarge {
+        width: 220px;
+        height: 220px;
+        border-radius: 15px;
+        border: 2px solid white;
+        background: transparent;
+      }
+
+    &.bordered {
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+        border: 2px solid var(--primary);
+        background: transparent;
+      }
+
+    &.bordered-table {
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+        border: 1px solid #f3f3f33e;
+        background: var(--primary-glow);
+      }
+  
+    &.mask-large {
+      width: 120px;
+      height: 120px;
+      mask-image: url('/mask.svg');
+      mask-repeat: no-repeat;
+      mask-size: 120px;
+      background: var(--primary);
+      color: black;
+    }
+
+    &.large {
+      width: 120px;
+      height: 120px;
+    }
+
+    &.regular {
+      width: 40px;
+      height: 40px;
+    }
+
+    &.regular-purple {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+    }
+
+    &.small {
+      width: 20px;
+      height: 20px;
+    }
+  }

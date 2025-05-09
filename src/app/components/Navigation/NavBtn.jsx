@@ -3,12 +3,8 @@ import React from 'react';
 import styles from './NavBtn.module.scss';
 import {motion} from 'framer-motion'
 
-interface NavBtnProps {
-  handleClick: () => void;
-  navActive: boolean;
-}
 
-const NavBtn: React.FC<NavBtnProps> = ({ handleClick, navActive }) => {
+const NavBtn = ({ handleClick, navActive }) => {
   return (
     <motion.div
       className={`${styles.navBtn} ${navActive ? styles.open : styles.navBtn}`}
