@@ -23,7 +23,7 @@ const Topbar = () => {
         }}
         onMouseLeave={() => setSize('small')}
       >
-        LIA Presentation
+        Erika 2.0
       </motion.a>
       <div
         onMouseEnter={() => {
@@ -37,7 +37,7 @@ const Topbar = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.3 }}
         >
-          <h2 className={styles.sub}>Robert Wägar FEA22STO</h2>
+          <h2 className={styles.sub}>Between words and breaths</h2>
         </motion.a>
       </div>
       <motion.button
@@ -45,7 +45,7 @@ const Topbar = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.3 }}
       >
-        <a href='/'>ET phone home</a>
+         <h2 className={styles.sub}>By Robert Wägar</h2>
       </motion.button>
     </div>
   );

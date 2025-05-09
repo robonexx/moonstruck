@@ -72,13 +72,13 @@ const Splash = () => {
             transition={{ delay: 1, duration: 1 }}
           />
           <motion.button
-            className='mt-2 border px-4 py-2 border-r-2 border-sky-500  rounded hover:bg-white hover:text-black transition-all duration-300'
+            className='mt-2 md:mr-2 border px-4 py-2 border-r-2 border-zinc-500 bg-white rounded hover:bg-white hover:text-black transition-all duration-300'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}
             onClick={handleEnterClick}
           >
-            <h2>Enter</h2>
+            Enter
           </motion.button>
           {error && (
             <motion.p

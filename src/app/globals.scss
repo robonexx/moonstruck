@@ -116,26 +116,6 @@ p {
   }
 }
 
-.bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  max-height: 100vh;
- /*  background-image: url('/Background.png'); */
-  background-position: center 150%;
-  object-fit: cover;
-  object-position: center;
-  background-size: 100%;
-  opacity: 0.085;
-  z-index: -1;
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb))
-  )
-  rgb(var(--background-end-rgb));
-
-  font-family: var(--font-inter);
-}
 
 
 

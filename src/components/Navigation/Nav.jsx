@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { motion } from 'framer-motion';
 import NavBtn from './NavBtn';
@@ -6,7 +6,6 @@ import NavBtn from './NavBtn';
 // styles
 import styles from './Navbar.module.scss';
 import { CursorContext } from '@/components/Cursor/CursorProvider';
-
 
 const Nav = (props) => {
   const [click, setClick] = useState(false);
@@ -20,7 +19,7 @@ const Nav = (props) => {
     setNavActive(!click);
   };
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 959);
     };
@@ -30,8 +29,8 @@ const Nav = (props) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
-
+  }, []); */
+  /* 
   useEffect(() => {
     if (window.innerWidth > 959) {
       let prevScrollpos = window.pageYOffset;
@@ -54,7 +53,7 @@ const Nav = (props) => {
         window.removeEventListener('scroll', handleScroll);
       };
     }
-  }, []);
+  }, []); */
 
   const variants = {
     hidden: { opacity: 0, x: 50 },
@@ -62,26 +61,30 @@ const Nav = (props) => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 0.3 + i * 0.2, 
-        duration: 0.2
+        delay: 0.3 + i * 0.2,
+        duration: 0.2,
       },
     }),
   };
 
   return (
-    <nav className={styles.navbar} ref={navRef}
+    <nav
+      className={styles.navbar}
+      ref={navRef}
       onMouseEnter={() => {
         setSize('large');
       }}
       onMouseLeave={() => setSize('small')}
     >
-      <button className={styles.menu_icon} onClick={handleClick}>
+      {/*  <button className={styles.menu_icon} onClick={handleClick}>
         <NavBtn navActive={navActive} handleClick={handleClick} />
-      </button>
+      </button> */}
       <motion.ul
-        className={click ? `${styles.nav_menu} ${styles.active}` : styles.nav_menu}
-        initial="hidden"
-        animate={(click || !isMobile) ? "visible" : "hidden"}
+        className={
+          click ? `${styles.nav_menu} ${styles.active}` : styles.nav_menu
+        }
+        initial='hidden'
+        animate={click || !isMobile ? 'visible' : 'hidden'}
         variants={{
           visible: {
             transition: {

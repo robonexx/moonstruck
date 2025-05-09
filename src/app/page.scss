@@ -1,0 +1,404 @@
+
+$color-dark:  #121212;
+$color-light: #b1b1b1;
+
+$font-display: "Mea Culpa",  cursive;
+$font-body:    "Cormorant",  serif;
+
+$gr-clr-pinkdreams: linear-gradient(to right, #FFA69E, #861657);
+
+.main {
+  overflow: hidden;
+  background: linear-gradient(99.9deg, rgb(6, 7, 19) 21.2%, rgba(20, 4, 34, 0.396) 84.8%);
+}
+
+.video-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+
+  video {
+    position: absolute;
+    top: 50%;  left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;    // fill without distortion
+    pointer-events: none;
+    opacity: .5;
+  }
+}
+
+// 2. Colour overlay (on top of the video)
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100svw;
+  height: 100svh;
+  pointer-events: none;
+  z-index: 0; 
+  background: var(--gr-clr-pinkdreams);
+}
+
+// ────────────────────────────────────────────────────────────────
+// Top-level UI elements
+// ────────────────────────────────────────────────────────────────
+.title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  font-family: $font-display;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+.poem-wrapper {
+  position: absolute;
+  bottom: 15svh;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+
+  width: min(80ch, 80vw);
+  height: 40vh;
+  z-index: 10;
+  opacity: 1;
+}
+.poem {
+  position: relative;
+  padding-top: 4rem;
+  width: 100%;
+  max-height: 100%;
+
+  white-space: pre-line;
+  overflow: hidden;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.4;
+  text-align: center;
+  pointer-events: none;
+}
+
+// ────────────────────────────────────────────────────────────────
+// SVG art
+// ────────────────────────────────────────────────────────────────
+.svg {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.75);
+
+  width: clamp(160px, 80vw, 400px);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+
+  z-index: 100;
+
+  svg {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  // ─── Shapes ───────────────────────────────────────────────────
+/*   #circle1,
+  #circle2,
+  #circle3 {
+    transform-origin: center;
+    opacity: 0;
+    animation: circle-rotate 5s linear 1s infinite forwards;
+  } */
+
+ /*  #circle1 { fill: #1a1a1a; animation-delay: .5s; }
+  #circle2 { fill: transparent; stroke: #fff;           }
+  #circle3 { fill: transparent; stroke: #a0a0a0; animation-direction: reverse; } */
+
+  #rectangle {
+    fill: rgba(0, 0, 0, .66);
+    stroke: #fff;
+    stroke-width: 5px;
+    width: 220px; height: 220px;
+    opacity: 0;
+    transform-origin: center;
+    animation: rectangle-rotate 60s linear 2s infinite forwards;
+  }
+
+  .line {
+    fill: none;
+    stroke-width: 1;
+    stroke: $color-light;
+    opacity: .025;
+    transition: stroke 1s ease;
+
+    &#line1 { stroke-dasharray: 200.269; animation: drawline 3s  .3s infinite forwards; }
+    &#line2 { stroke-dasharray: 265.326; animation: drawline 10s .1s infinite forwards; }
+    &#line3 { stroke-dasharray: 266.154; animation: drawline 5s  .6s infinite forwards; }
+  }
+}
+
+// ────────────────────────────────────────────────────────────────
+// Buttons
+// ────────────────────────────────────────────────────────────────
+%btn-base { // silent placeholder = easy reuse
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: .6rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, .5);
+  color: rgba(226, 226, 226, 0.9);
+  transition: background .3s, color .3s;
+}
+
+#playmusic {
+  @extend %btn-base;
+  bottom: 1rem;
+  z-index: 2;
+
+  &:hover { background: rgba(226, 226, 226, .34); color: #000; }
+}
+
+.deep-btn {
+  @extend %btn-base;
+  bottom: 2rem;
+  z-index: 6;
+
+  &:hover { background: rgba(10, 2, 28, 0.478); color: rgb(88, 83, 101); }
+}
+
+// ────────────────────────────────────────────────────────────────
+// Animations
+// ────────────────────────────────────────────────────────────────
+@keyframes drawline {
+  0%   { stroke-dashoffset: 0;         stroke: $color-dark; }
+  50%  { stroke-dashoffset: 266.154;   stroke: $color-light; }
+  100% { stroke-dashoffset: 0;         stroke: $color-dark; }
+}
+
+/* @keyframes circle-rotate {
+  from { transform: rotate(-360deg); }
+  to   { transform: rotate( 360deg); opacity: .8; }
+}
+ */
+@keyframes rectangle-rotate {
+  0%   { transform: rotate( 360deg) scale(.7); opacity: 0; }
+  50%  { transform: rotate(-360deg) scale(.3); opacity: .6; }
+  100% { transform: rotate( 360deg) scale(.7); opacity: 0; }
+}
+
+// ────────────────────────────────────────────────────────────────
+// Responsive tweak
+// ────────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .svg { transform: translate(-50%, -50%) scale(.55); }
+}
+
+#circle1 {
+    fill: rgb(255, 255, 255);
+    transform-origin: center;
+    animation-delay: 0.5s;
+}
+#circle2 {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 1;
+    
+}
+#circle3 {
+    fill: transparent;
+    stroke: rgb(160, 160, 160);
+    stroke-width: 1;
+    animation-direction: reverse;
+    
+}
+
+.circle {
+    opacity: 0;
+    transition: all 2s ease;
+    animation: circle-rotate 5s linear forwards 1s infinite;
+}
+
+#rectangle {
+    opacity: 0;
+    fill: #000000a9;
+    stroke: white;
+    stroke-width: 5px;
+    width: 220px;
+    height: 220px;
+    transform-origin: center;
+    animation: rectangle-rotate 60s linear forwards 2s infinite;
+}
+
+.line {
+    fill: none;
+    stroke-width: 1;
+    opacity: 0.025;
+    stroke: $color-light;
+    transition: all 1s ease;
+} 
+
+#line1 {
+    stroke-dasharray: 200.269;
+    stroke-dashoffset: 200.269;
+    animation: drawline 3s ease forwards 0.3s infinite;
+}
+#line2 {
+    stroke-dashoffset: 265.326;
+    stroke-dasharray: 265.326;
+    animation: drawline 10s ease-in-out forwards .1s infinite;
+
+}
+#line3 {
+    stroke-dashoffset: 266.154;
+    stroke-dasharray: 266.154;
+    animation: drawline 5s ease forwards .6s infinite;
+
+}
+
+@keyframes drawline {
+
+    0% {
+        transform: translateY(0);
+        stroke-dashoffset: 0;
+        stroke: $color-dark;
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(0);
+        stroke-dashoffset: 266.154;
+    stroke-dasharray: 266.154;
+        stroke: $color-light;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        stroke-dashoffset: 0;
+        stroke: $color-dark;
+        opacity: 1;
+    }
+}
+@keyframes circle-rotate {
+    from {
+        transform-origin: center;
+        transform: rotate(-360deg);
+        stroke-dasharray: 0;
+    }
+    to {
+        transform-origin: center;
+        transform: rotate(360deg);
+        stroke-dashoffset: 400;
+        opacity: 0.8;
+    }
+}
+@keyframes rectangle-rotate {
+    0% {
+       
+        transform: rotate(360deg) scale(0.7);
+        stroke-dashoffset: 400;
+        opacity: 0;
+    }
+    50% {
+       
+        transform: rotate(-360deg) scale(0.3);
+        stroke-dasharray: 0;
+        opacity: 0.6;
+    }
+    100% {
+       
+        transform: rotate(360deg) scale(0.7);
+        stroke-dashoffset: 400;
+        opacity: 0;
+    }
+}
+
+.erika {
+  position: absolute;
+  top: 12%;
+  left: 57.25%;
+  transform: translate(-50%, -50%) scale(0.4) rotate(10deg);
+  stroke: rgba(0, 0, 0, 0.219);
+  animation: erika 60s linear forwards 2s infinite;
+}
+
+svg.erika path {
+  fill: rgba(0, 0, 0, 0.192);
+}
+
+
+@keyframes erika {
+
+  0% {
+      stroke: #00000049;
+      opacity: 1;
+  }
+
+  50% {
+      stroke: #2828283f;
+      opacity: 1;
+  }
+  100% {
+
+      stroke: #00000035;
+      opacity: 1;
+  }
+}
+
+.underlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(99.9deg, rgba(6, 7, 19, 0.56) 21.2%, rgba(20, 4, 34, 0.396) 84.8%);
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.587);
+}
+
+@keyframes star-blink{
+  40% { -webkit-opacity: 0.3; opacity: 0.3;  }
+  90%,100% { -webkit-opacity: 1; opacity: 1; -webkit-transform: scale(1.2); transform: scale(1.2); border-radius: 999999px;}
+}
+
+.imageHolder img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(10deg);
+  height: auto;
+  width: 220px;
+  object-fit: contain;
+  background: transparent;
+}
+
+
+
+@media (max-width: 768px) {
+  .imageHolder img {
+    width: 170px;
+    height: auto;
+  }
+}
