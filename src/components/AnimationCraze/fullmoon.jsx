@@ -15,38 +15,24 @@ const Fullmoon = () => {
   return (
     <AnimatePresence>
       {/*   {isVisible && ( */}
-      <motion.div
-        className={styles.fullmoon}
-        /* initial={{ opacity: 1 }}
-        animate={{
-          opacity: [, 1, 1, 0],
-          scale: [1, 1, 1, 200],
-        }}
-        exit={{ opacity: 0 }}
-        transition={{
-          duration: 2,
-          delay: 0,
-          ease: 'easeInOut',
-        }} */
-      >
+      <motion.div className={styles.fullmoon}>
         <motion.svg
-          className={styles['svg-desktop']}
-          viewBox='0 0 110 110'
+          viewBox='0 0 100 100'
           width='200'
           height='200'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-         /*  initial={{ opacity: 1, y: 0 }} */
-         /*  animate={{ opacity: [0, 1], y: 0, scale: 0.9 }}
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ y: -150, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{
             type: 'spring',
-            stiffness: 200,
-            damping: 40,
+            stiffness: 5,
+            damping: 3,
             bounce: 0.3,
-            duration: 0.5,
-            delay: 0,
-          }} */
+            duration: 4,
+            delay: 2,
+          }}
         >
           <g transform='rotate(18.7, 50, 50)'>
             <rect

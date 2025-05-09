@@ -35,14 +35,14 @@ const Splash = () => {
   };
 
   return (
-    <div className='w-full max-h-screen overflow-hidden p-40 relative'>
+    <div className='w-screen max-h-screen overflow-hidden p-40 absolute top-0 left-0'>
       <AnimatePresence mode='wait'>
         {showLoadingSection && (
           <motion.section
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ exit: { delay: 6 } }}
+            transition={{ exit: { delay: 7 } }}
           >
             <Fullmoon />
             <TheDrop />
@@ -52,19 +52,27 @@ const Splash = () => {
         )}
       </AnimatePresence>
       {!showLoadingSection && (
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
           <motion.input
-            type='password'
+            type='text'
             value={password}
             onChange={handlePasswordChange}
-            className='border px-4 py-2 border-r-2 rounded mb-4 text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+            className='border px-4 py-2 border-r-2 rounded mb-4'
+            style={{ color: 'black' }}
             placeholder='Enter Password'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
           />
           <motion.button
-            className='border px-4 py-2 border-r-2 rounded hover:bg-white hover:text-black transition-all duration-300'
+            className='mt-2 border px-4 py-2 border-r-2 border-sky-500  rounded hover:bg-white hover:text-black transition-all duration-300'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}

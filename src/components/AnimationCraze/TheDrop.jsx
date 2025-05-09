@@ -20,7 +20,7 @@ const TheDrop = () => {
           initial={{ opacity: 1 }}
           animate={{
             opacity: [, 1, 1, 0],
-            scale: [1, 1, 1, 200],
+            scale: [1, 1, 1, 1],
           }}
           exit={{ opacity: 0 }}
           transition={{
@@ -30,7 +30,7 @@ const TheDrop = () => {
           }}
         >
           <motion.svg
-            className={styles['svg-desktop']}
+            /* className={styles['svg-desktop']} */
             width='53'
             height='51'
             viewBox='0 0 52 51'

@@ -1,19 +1,31 @@
 
-.fullmoon {
-    width:220px;
+.logo-drop {
+    width: fit-content;
     position: absolute;
-    left: 50%;
-    top: 30%;
+    left: 49%;
+    top: 48%;
     transform: translate(-50%, -50%);
-    z-index: 10;
-    max-height: 200px;
-    width: auto;
+    z-index: -1;
+    max-height: 54px;
+    width: 53px;
   
-   /*  > svg {
+    > svg {
         position: relative;
 
         &:nth-child(2) {
             position: fixed;
         }
-    } */
+    }
   }
+
+  
+.fullmoon {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: auto;
+    width: 200px;
+  }
+  
