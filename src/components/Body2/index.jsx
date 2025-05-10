@@ -1,9 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const Body2 = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div>
+    <div ref={ref}>
       <motion.svg
         width='247'
         height='554'
@@ -17,8 +19,8 @@ const Body2 = () => {
           strokeWidth='2'
           mask='url(#path-1-outside-1_659_33)'
           initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 3, ease: 'easeInOut' }}
+          animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
+          transition={{ delay: 0.5, duration: 3, ease: 'easeInOut' }}
         />
       </motion.svg>
     </div>
