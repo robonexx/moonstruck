@@ -12,11 +12,8 @@ const Header = () => {
       <Topbar />
       <Nav>
         <NavItem title='Erika 2.0' url='/' />
-        <NavItem
-          title='Gallery'
-          url='/gallery'
-        >
-        </NavItem>
+        <NavItem title='Gallery' url='/gallery' />
+        <NavItem title='MeuMeu' url='/meumeu' />
       </Nav>
     </div>
   );

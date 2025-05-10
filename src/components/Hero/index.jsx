@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 import styles from './Hero.module.scss';
 
@@ -101,9 +102,12 @@ const Hero = () => {
           <span className={styles.text}>Quero te abraçar, te beijar,</span>
           <br />E nunca mais te deixar.
         </div>
-        <button href='/gallery/#slider' className={styles.btn} ref={buttonRef}>
-          Photos
-        </button>
+
+        <Link href='/gallery/#photos'>
+          <button className={styles.btn} ref={buttonRef}>
+            Gallery
+          </button>
+        </Link>
         <img src='/erika1.jpg' alt='' className={styles.image} />
       </div>
     </div>
