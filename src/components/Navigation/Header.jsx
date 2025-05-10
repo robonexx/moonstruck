@@ -11,7 +11,7 @@ const Header = () => {
     <div className={styles.header}>
       <Topbar />
       <Nav>
-        <NavItem title='E & R 2.0' url='/' />
+        <NavItem title='LUA' url='/' />
         <NavItem title='Gallery' url='/gallery' />
         <NavItem title='MeuMeu' url='/meumeu' />
       </Nav>
