@@ -36,7 +36,7 @@ const Meumeu = () => {
           animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Meu Amor❤️
+         Você é a coisa mais linda deste mundo❤️
         </motion.h2>
         <Body1 />
       </section>
@@ -47,7 +47,8 @@ const Meumeu = () => {
           animate={inView3 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Você é a coisa mais linda deste mundo❤️
+           Meu Amor❤️
+          
         </motion.h2>
         <Body3 />
       </section>
