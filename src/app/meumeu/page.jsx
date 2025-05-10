@@ -17,38 +17,39 @@ const Meumeu = () => {
   const inView3 = useInView(ref3, { once: true });
 
   return (
-    <div className='meumeu'>
-      <section>
-        <motion.h2
-          ref={ref1}
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView1 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Meu coração❤️
-        </motion.h2>
-        <Body2 />
-      </section>
-      <section>
-        <motion.h2
-          ref={ref2}
-          initial={{ opacity: 0, y: -50 }}
-          animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-         Você é a coisa mais linda deste mundo❤️
-        </motion.h2>
-        <Body1 />
-      </section>
+    <div className='main'>
+      <div className='meumeu'>
+        <section>
+          <motion.h2
+            ref={ref1}
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView1 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            Meu coração❤️
+          </motion.h2>
+          <Body2 />
+        </section>
+        <section>
+          <motion.h2
+            ref={ref2}
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView2 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            Você é a coisa mais linda deste mundo❤️
+          </motion.h2>
+          <Body1 />
+        </section>
+      </div>
       <section>
         <motion.h2
           ref={ref3}
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView3 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          initial={{ opacity: 0, y: 100 }}
+          animate={inView3 ? { opacity: 1, x: 0 } : { opacity: 0, y: 100 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
-           Meu Amor❤️
-          
+          Meu Amor❤️
         </motion.h2>
         <Body3 />
       </section>
