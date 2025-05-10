@@ -23,7 +23,7 @@ const Topbar = () => {
         }}
         onMouseLeave={() => setSize('small')}
       >
-        Erika 2.0
+        E.A 2.0
       </motion.a>
       <div
         onMouseEnter={() => {
