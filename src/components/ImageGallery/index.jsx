@@ -10,13 +10,19 @@ import Image from 'next/image';
 import styles from './ImageGallery.module.scss';
 
 const images = [
-  '/erika1.jpg',
-  '/image1.webp',
+  '/image10.webp',
   '/image2.webp',
   '/image3.webp',
   '/image4.webp',
   '/image5.webp',
   '/image7.webp',
+  '/image8.webp',
+  '/image9.webp',
+  '/image13.webp',
+  '/image1.webp',
+  '/image11.webp',
+  '/image12.webp',
+  '/image.webp',
 ];
 
 const ImageGallery = () => {
