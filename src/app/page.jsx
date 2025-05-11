@@ -2,10 +2,11 @@
 
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { CursorContext } from '@/components/Cursor/CursorProvider';
-import { getMoonPhase } from '@/scripts/moon';
+import { getMoonPhase, swedenFullMoons2025 } from '@/scripts/moon';
 import { quotes, deepQuotes, fullmoonQuotes } from '@/scripts/erika';
 import { initSky } from '@/scripts/sky';
 import './page.scss';
+
 
 const Home = () => {
   const [showLoadingSection, setShowLoadingSection] = useState(true);
@@ -49,13 +50,16 @@ const Home = () => {
       };
     };
 
-    const isFullMoon = currentMoon.phase.toLowerCase().includes('full');
-    const nextQuote = makeRotator(quotes, 'erika');
-    const nextFullMoonQuote = makeRotator(fullmoonQuotes, 'erika-full');
-    const nextDeepQuote = makeRotator(deepQuotes, 'erika-deep');
+    const regularQuote = makeRotator(quotes, 'erika');
+    const deepQuote = makeRotator(deepQuotes, 'erika-deep');
+    const fullQuote = makeRotator(fullmoonQuotes, 'erika-full');
 
-    // Set the correct quote source based on moon phase
-    currentSourceRef.current = isFullMoon ? nextFullMoonQuote : nextQuote;
+    const todayISO = new Date().toISOString().split('T')[0];
+    const isFullMoon = swedenFullMoons2025.includes(todayISO);
+    let initialSource = isFullMoon ? fullQuote : regularQuote;
+
+    // Set the current source getter function
+    currentSourceRef.current = () => initialSource();
 
     const typeWriter = (text, el) => {
       if (!el) return;
@@ -91,7 +95,7 @@ const Home = () => {
     };
 
     const handleDeepClick = () => {
-      currentSourceRef.current = nextDeepQuote;
+      currentSourceRef.current = () => deepQuote();
       typeWriter(currentSourceRef.current(), poemRef.current);
     };
 

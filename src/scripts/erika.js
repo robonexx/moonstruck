@@ -1,5 +1,30 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
+  `Sanoitta, tunnet minua.  
+Katseella, silität haavojani.  
+Läsnäolollasi,  
+muistan miltä tuntuu olla rakastettu, 
+aidosti, hiljaisesti, täysin.`,
+
+  `Você é o meu primeiro pensamento  
+quando o sol toca a manhã.  
+
+E o último sussurro  
+antes que o sono me leve.  
+
+Entre o despertar e o sonho,  
+é sempre você.`,
+
+  `Você é a flor,
+delicada, viva, única.  
+
+E eu?  
+Quero ser a água  
+que te nutre,  
+que te toca sem machucar,  
+que te ajuda a florescer  
+sem jamais te prender.  `,
+
   `I feel her love  
 not in grand words,  
 but in the way she asks,  
@@ -11,6 +36,11 @@ just to hear my voice.
 In the stillness between us  
 that says,  
 “I see you, I’m here.”`,
+
+  `Ja kun katseemme kohtasivat taas,  
+tiesin,
+jotkut sielut löysivät  
+toisensa uudelleen.`,
 
   `...I’m not afraid of falling anymore.
 Because every time I land next to you,
@@ -64,7 +94,7 @@ it was an answer.
 A quiet way of saying: 
 “I trust you.” `,
 
-  `I choose to love her now, 
+  `I choose to give her my love now, 
 in this breath, 
 in this moment. 
 
@@ -203,12 +233,6 @@ With every moment We could've spent elsewhere and didn't`,
   wasn’t silence,
   but safety.`,
 
-  `The moon connection
-  It was her whisper to the stars,
-  and my call echoing back
-  the universe nodding in resonance
-  A vibration to let our souls dance`,
-
   `Her soul recognizes mine…
   Not through words or sight,
   but by vibration,
@@ -242,36 +266,17 @@ With every moment We could've spent elsewhere and didn't`,
   Choosing again and again,
   The way flowers turn to the sun without question.`,
 
-  `I saw the shadow behind her smile
-   and didn’t flinch.
-   Didn’t run.
-   Didn’t ask her to be brighter.
-  I stayed.
-   And that, that
-   is what scared her the most.`,
-
-  `Because for the first time,
-   someone wasn’t reaching for the perfect version
-   they were choosing her.
-   As she was.
-   Shadow and all.`,
-
   `For the first time without trembling hands,
   Without bracing for a storm that never comes.
   I breathe…
   And in that space between heartbeats,
   I receive love like morning light on open skin.`,
 
-  `She does not look back to broken mirrors.
-  She walks with me toward gardens yet unseen,
-  Where the past cannot drag her feet,
-  Where the future is ours to paint in colors undreamed.`,
-
   `I breathe,
   And with every breath,
   I welcome the love I once thought I could only chase.
   Now it is here.
-  Now it is mine.
+  Now it is real.
   Now, I am ready.`,
 
   `Because to open the door
@@ -309,10 +314,29 @@ love that sees,
 love that stays,  
 love that says:  
 “In my heart, I choose you”  
-`
+`,
 ];
 
 export const deepQuotes = [
+  `Because for the first time,
+   someone wasn’t reaching for the perfect version
+   they were choosing her.
+   As she was.
+   Shadow and all.`,
+
+  `She does not look back to broken mirrors.
+  She walks with me toward gardens yet unseen,
+  Where the past cannot drag her feet,
+  Where the future is ours to paint in colors undreamed.`,
+
+  `I saw the shadow behind her smile
+   and didn’t flinch.
+   Didn’t run.
+   Didn’t ask her to be brighter.
+  I stayed.
+   And that, that
+   is what scared her the most.`,
+
   `Love didn’t arrive when I chased it, 
 or when I dreamed it into a perfect shape. 
 
@@ -551,8 +575,10 @@ No need for promises carved in stone,
 when presence says: you're not alone.  
 In your arms, I’ve come to know, 
 we are the magic in the fullmoon’s glow.`,
+];
 
-  `As we stand in the full moon’s glow,
+/* 
+ `As we stand in the full moon’s glow,
 I think of a soul I used to know
 The warmth of the sun in her gentle smile,
 moonglow eyes that stayed awhile
@@ -565,4 +591,10 @@ You’re never truly alone
 
 No matter the distance, or how paths bend,
 I still wish you peace, and love, my friend`,
-];
+
+`The moon connection
+  It was her whisper to the stars,
+  and my call echoing back
+  the universe nodding in resonance
+  A vibration to let our souls dance`,
+*/

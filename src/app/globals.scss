@@ -12,9 +12,6 @@
 
 :root {
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
     --callout-rgb: rgba(20, 20, 20);
     --callout-border-rgb: rgba(108, 108, 108);
@@ -92,6 +89,8 @@ $font-text: var(--font-playfair);
   }
 }
 
+
+
 *, ::after, ::before,html, body {
   box-sizing: border-box;
   padding: 0;
@@ -103,6 +102,13 @@ body {
   color: rgb(var(--foreground-rgb));
    -webkit-font-smoothing: antialiased;
   min-height: 100svh;
+  font-family: $font-text;
+
+  background: linear-gradient(99.9deg, rgb(30, 23, 32) 21.2%, rgb(39, 13, 62) 84.8%);
+}
+
+h1,h2,h3,h4 {
+  font-family: $font-headline;
 }
 
 

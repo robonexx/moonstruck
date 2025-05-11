@@ -6,8 +6,8 @@ export function initSky() {
   const MIN_DUR = 0.5;
   const MAX_DUR = 1.0;
   const DARK_BG =
-    'linear-gradient(99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8%)';
-  const SUNSET_BG = 'linear-gradient(to right, #FFA69E, #861657)';
+    'linear-gradient(99.9deg, rgb(30, 23, 32) 21.2%, rgb(39, 13, 62) 84.8%)';
+  const SUNSET_BG = 'linear-gradient(to right, #241e2e, #0e0624)';
 
   const rand = (min, max) => min + Math.random() * (max - min);
 
