@@ -3,7 +3,7 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { CursorContext } from '@/components/Cursor/CursorProvider';
 import { getMoonPhase } from '@/scripts/moon';
-import { quotes, deepQuotes } from '@/scripts/erika';
+import { quotes, deepQuotes, fullmoonQuotes } from '@/scripts/erika';
 import { initSky } from '@/scripts/sky';
 import './page.scss';
 
@@ -13,16 +13,23 @@ const Home = () => {
   const [moonPhase, setMoonPhase] = useState({ src: '', phase: '' });
   const poemRef = useRef(null);
   const deepBtnRef = useRef(null);
+  const oneMoreBtnRef = useRef(null);
   const writerTokenRef = useRef(0);
+  const currentSourceRef = useRef(
+    () => quotes[Math.floor(Math.random() * quotes.length)]
+  );
 
   useEffect(() => {
     const CHAR_DELAY = 45;
     const FADE_DURATION = 300;
 
     const today = new Date();
-    setMoonPhase(
-      getMoonPhase(today.getFullYear(), today.getMonth() + 1, today.getDate())
+    const currentMoon = getMoonPhase(
+      today.getFullYear(),
+      today.getMonth() + 1,
+      today.getDate()
     );
+    setMoonPhase(currentMoon);
 
     const makeRotator = (arr, key) => {
       const ORDER_KEY = `${key}-order`;
@@ -42,8 +49,13 @@ const Home = () => {
       };
     };
 
+    const isFullMoon = currentMoon.phase.toLowerCase().includes('full');
     const nextQuote = makeRotator(quotes, 'erika');
+    const nextFullMoonQuote = makeRotator(fullmoonQuotes, 'erika-full');
     const nextDeepQuote = makeRotator(deepQuotes, 'erika-deep');
+
+    // Set the correct quote source based on moon phase
+    currentSourceRef.current = isFullMoon ? nextFullMoonQuote : nextQuote;
 
     const typeWriter = (text, el) => {
       if (!el) return;
@@ -74,24 +86,27 @@ const Home = () => {
       write(0);
     };
 
-    if (poemRef.current) {
-      typeWriter(nextQuote(), poemRef.current);
-    }
-
-    const handleDeepClick = () => {
-      if (poemRef.current) {
-        typeWriter(nextDeepQuote(), poemRef.current);
-      }
+    const showInitialQuote = () => {
+      typeWriter(currentSourceRef.current(), poemRef.current);
     };
 
-    if (deepBtnRef.current) {
-      deepBtnRef.current.addEventListener('click', handleDeepClick);
-    }
+    const handleDeepClick = () => {
+      currentSourceRef.current = nextDeepQuote;
+      typeWriter(currentSourceRef.current(), poemRef.current);
+    };
+
+    const handleOneMoreClick = () => {
+      typeWriter(currentSourceRef.current(), poemRef.current);
+    };
+
+    showInitialQuote();
+
+    deepBtnRef.current?.addEventListener('click', handleDeepClick);
+    oneMoreBtnRef.current?.addEventListener('click', handleOneMoreClick);
 
     return () => {
-      if (deepBtnRef.current) {
-        deepBtnRef.current.removeEventListener('click', handleDeepClick);
-      }
+      deepBtnRef.current?.removeEventListener('click', handleDeepClick);
+      oneMoreBtnRef.current?.removeEventListener('click', handleOneMoreClick);
     };
   }, []);
 
@@ -217,9 +232,14 @@ const Home = () => {
         </video>
       </div>
 
-      <button ref={deepBtnRef} className='deep-btn'>
-        It’s safe, share the deeper ones
-      </button>
+      <div className='button-wrapper'>
+        <button ref={deepBtnRef} className='deep-btn'>
+          It’s safe, share the deeper ones
+        </button>
+        <button ref={oneMoreBtnRef} className='deep-btn'>
+          One more
+        </button>
+      </div>
     </main>
   );
 };

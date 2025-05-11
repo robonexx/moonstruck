@@ -142,14 +142,14 @@ $gr-clr-pinkdreams: linear-gradient(to right, #FFA69E, #861657);
 // ────────────────────────────────────────────────────────────────
 // Buttons
 // ────────────────────────────────────────────────────────────────
-%btn-base { // silent placeholder = easy reuse
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+%btn-base { 
+  position: relative;
+  /* left: 50%;
+  transform: translateX(-50%); */
 
   padding: .6rem 1rem;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 1rem);
   text-transform: uppercase;
 
   border: none;
@@ -392,6 +392,16 @@ svg.erika path {
   background: transparent;
 }
 
+.button-wrapper {
+  position: absolute;
+  display: flex;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  gap: 20px;
+} 
+
 
 
 @media (max-width: 768px) {
@@ -399,4 +409,13 @@ svg.erika path {
     width: 170px;
     height: auto;
   }
+
+  .button-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0.5rem;
+  z-index: 2;
+} 
 }
+
