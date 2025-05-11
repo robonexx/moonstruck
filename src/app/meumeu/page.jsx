@@ -38,7 +38,7 @@ const para2 = (
       <br />
       <span className='specialWord'>love that says:</span>
       <br />
-      “In my heart, I choose you
+      “In my heart, I choose you”
     </p>
   </ParagraphWord>
 );
