@@ -1,51 +1,105 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import React, { useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import styles from './style.module.scss';
 
-export default function ParagraphWord({ paragraph }) {
+export default function ParagraphWord({ children }) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start 0.9', 'start 0.25'],
   });
 
-  // Split paragraph into words, detecting special words with regex
-  const words = paragraph.split(' ').map((word) => {
-    const isSpecial = word.startsWith('#') && word.endsWith('#');
-    return {
-      text: isSpecial ? word.slice(1, -1) : word, // Remove the hashtags
-      isSpecial, // Mark if this is a special word
-    };
-  });
+  // Flat word index counter
+  let globalWordIndex = 0;
+
+  // First pass: count total number of words
+  const countWords = (node) => {
+    if (typeof node === 'string') {
+      return (node.match(/\S+/g) || []).length;
+    }
+    if (React.isValidElement(node)) {
+      return React.Children.toArray(node.props.children).reduce(
+        (sum, child) => sum + countWords(child),
+        0
+      );
+    }
+    return 0;
+  };
+
+  const totalWords = useMemo(
+    () =>
+      React.Children.toArray(children).reduce(
+        (sum, child) => sum + countWords(child),
+        0
+      ),
+    [children]
+  );
+
+  // Second pass: render wrapped words with index-based range
+  const wrapWords = (node, inheritedIsSpecial = false) => {
+    if (typeof node === 'string') {
+      const tokens = node.match(/\S+|\s+/g) || [];
+
+      return tokens.map((token, i) => {
+        const isWord = /\S/.test(token);
+        if (isWord) {
+          const start = globalWordIndex / totalWords;
+          const end = start + 1 / totalWords;
+          const word = (
+            <Word
+              key={token + globalWordIndex}
+              progress={scrollYProgress}
+              range={[start, end]}
+              isSpecial={inheritedIsSpecial}
+            >
+              {token}
+            </Word>
+          );
+          globalWordIndex++;
+          return word;
+        } else {
+          return token;
+        }
+      });
+    }
+
+    if (React.isValidElement(node)) {
+      const isSpan = node.type === 'span';
+      const hasSpecialClass =
+        node.props.className?.includes('special') ||
+        node.props.className?.includes('highlight');
+
+      const isSpecial = isSpan || hasSpecialClass;
+
+      return React.cloneElement(node, {
+        ...node.props,
+        children: React.Children.map(node.props.children, (child) =>
+          wrapWords(child, isSpecial)
+        ),
+      });
+    }
+
+    return node;
+  };
 
   return (
-    <p ref={container} className={styles.paragraph}>
-      {words.map((word, i) => {
-        const start = i / words.length;
-        const end = start + 1 / words.length;
-        return (
-          <Word
-            key={i}
-            progress={scrollYProgress}
-            range={[start, end]}
-            isSpecial={word.isSpecial}
-          >
-            {word.text}
-          </Word>
-        );
-      })}
-    </p>
+    <div ref={container} className={styles.paragraph}>
+      {React.Children.map(children, wrapWords)}
+    </div>
   );
 }
 
 const Word = ({ children, progress, range, isSpecial }) => {
   const opacity = useTransform(progress, range, [0, 1]);
+
   return (
     <span className={isSpecial ? styles.specialWord : styles.word}>
       <span className={styles.shadow}>{children}</span>
-      <motion.span style={{ opacity: opacity }}>{children}</motion.span>
+      <motion.span className="visible" style={{ opacity }}>
+        {children}
+      </motion.span>
     </span>
   );
 };

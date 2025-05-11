@@ -282,6 +282,34 @@ With every moment We could've spent elsewhere and didn't`,
    "I got scared of you because you didn’t want to leave me alone."
    But what she meant was deeper,
    a truth wrapped in trembling silence`,
+
+  `I wanna feel safe with you, so I can give you the best version of me`,
+
+  `Being with you feels like a dream,  
+but every glance, every breath,  
+reminds me, it’s real.  
+
+And maybe that’s what makes it scary,  
+not because I doubt it,  
+but because it feels so good,  
+so true,  
+like something I’ve waited for  
+without knowing.  
+
+I opened my heart,  
+trembling but ready, 
+and you met me,  
+not with fear,  
+but with your own  
+wide open.  
+
+Now we give each other  
+what this life rarely offers,  
+love that sees,  
+love that stays,  
+love that says:  
+“In my heart, I choose you”  
+`
 ];
 
 export const deepQuotes = [
@@ -494,11 +522,7 @@ my body knows
 what my mind tries to silence, 
 I'm right I know this.`,
 
-  `Her born day on earth is next month, 
-something in me just knows, 
-This is when we will meet again.
-
-I just know. 
+  `I just know. 
 She’ll come back. 
 We’ll meet. 
 And when it happens, 

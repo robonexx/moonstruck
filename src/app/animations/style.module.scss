@@ -2,18 +2,21 @@ $light-gold: #B8A054;
 
 .paragraph{
     display: flex;
-    font-size: clamp(1.25rem, 2vw, 3rem);
+    
     line-height: 1;
     padding: clamp(20px, 5vw, 40px);
+    
     max-width: 980px;
     color: white;
     flex-wrap: wrap;
+    font-size: clamp(1rem, 2vw, 2rem);
     font-family: var(--font-playfair);
 
     .word{
       position: relative;
+       display: inline-block; 
       margin-right: 12px;
-      margin-top: 12px;
+      margin-top: 12px;     
       
       .shadow{
         position: absolute;
@@ -23,11 +26,11 @@ $light-gold: #B8A054;
 
   .specialWord {
     position: relative;
+      display: inline-block; 
     margin-right: 12px;
     margin-top: 12px;
     color: $light-gold;
     font-weight: bold; 
-    font-size: clamp(1.25rem, 2vw, 3rem);
     .shadow {
       position: absolute;
       opacity: 20%;

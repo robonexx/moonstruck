@@ -7,19 +7,41 @@ import Body2 from '@/components/Body2';
 import Body3 from '@/components/Body3';
 import ParagraphWord from '../animations/ParagraphWord';
 
-const para1 = () => {
-  return (
-    <>
-      <p>Meu <span>coração</span>❤️ then some other text <span>Hightligted text</span> and so on</p>
-    </>
-  );
-}
+const para1 = (
+  <ParagraphWord>
+    <p>
+      Your <span className='specialWord'>voice</span> is the special
+      <span className='specialWord'>place,</span> where my
+      <span className='specialWord'>soul</span> remembers how to
+      <span className='specialWord'>breathe</span>
+    </p>
+  </ParagraphWord>
+);
 
-const paragraph =
-  'Your #voice# is the #place# , my #soul# remembers how to #breathe#';
-
-const paragraph2 =
-  'Her voice calms me, It settles the noise inside. It warms my heart,Calms my breath. I could listen to her forever,It is not what she says, It is the way it feels when she speaks,like everything is going to be okay.';
+const para2 = (
+  <ParagraphWord>
+    <p>
+      Being with you feels like a <span className='specialWord'>dream,</span>
+      but every glance, every <span className='specialWord'>breath,</span>,
+      reminds me, it’s <span className='specialWord'>real.</span>
+      And maybe that’s what makes it scary, not because I doubt it, but because
+      it <span className='specialWord'>feels so good,</span>
+      so true, like something I’ve waited for without knowing.
+      <br />I opened my <span className='specialWord'>heart,</span>
+      trembling but ready, and <span className='specialWord'>you met me,</span>
+      not with fear,
+      <span className='specialWord'>but with your own wide open. </span>
+      Now we give each other what this life rarely offers, <br />
+      <span className='specialWord'>love that sees,</span>
+      <br />
+      <span className='specialWord'>love that feels,</span>
+      <br />
+      <span className='specialWord'>love that says:</span>
+      <br />
+      “In my heart, I choose you
+    </p>
+  </ParagraphWord>
+);
 
 const Meumeu = () => {
   const ref1 = useRef(null);
@@ -57,8 +79,7 @@ const Meumeu = () => {
           <Body1 />
         </section>
       </div>
-       <ParagraphWord paragraph={paragraph} />
-        <div style={{ height: '5vh' }}></div>
+      {para1}
       <section>
         <motion.h2
           ref={ref3}
@@ -70,10 +91,7 @@ const Meumeu = () => {
         </motion.h2>
         <Body3 />
       </section>
-      <section>
-        <ParagraphWord paragraph={paragraph2} />
-        <div style={{ height: '5vh' }}></div>
-      </section>
+      <section>{para2}</section>
       <div style={{ height: '50vh' }}>...❤️❤️❤️...</div>
     </div>
   );

@@ -1,20 +1,25 @@
 'use client';
 import { useState, useEffect } from 'react';
-
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.scss';
 import Splash from '../components/Splash/Splash';
 import Header from '../components/Navigation/Header';
 import Footer from '../components/Footer';
+import { Fira_Sans, Playfair_Display } from 'next/font/google';
+import './globals.scss';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const fira = Fira_Sans({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
+  variable: '--font-fira-sans',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const playfair = Playfair_Display({
+  weight: ['400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
 });
 
 export default function RootLayout({ children }) {
@@ -30,9 +35,7 @@ export default function RootLayout({ children }) {
   }, []);
   return (
     <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={` ${fira.variable} ${playfair.variable} antialiased`}>
         {!authenticated ? (
           <Splash />
         ) : (
