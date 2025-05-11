@@ -10,8 +10,8 @@ import ParagraphWord from '../animations/ParagraphWord';
 const para1 = (
   <ParagraphWord>
     <p>
-      Your <span className='specialWord'>voice</span> is the special
-      <span className='specialWord'>place,</span> where my
+      Your <span className='specialWord'>voice </span>is the special
+      <span className='specialWord'> place,</span> where my
       <span className='specialWord'>soul</span> remembers how to
       <span className='specialWord'>breathe</span>
     </p>
@@ -21,22 +21,22 @@ const para1 = (
 const para2 = (
   <ParagraphWord>
     <p>
-      Being with you feels like a <span className='specialWord'>dream,</span>
+      Being with you feels like a <span className='specialWord'>dream, </span>
       but every glance, every <span className='specialWord'>breath,</span>,
-      reminds me, it’s <span className='specialWord'>real.</span>
+      reminds me, it’s <span className='specialWord'>real. </span>
       And maybe that’s what makes it scary, not because I doubt it, but because
-      it <span className='specialWord'>feels so good,</span>
-      so true, like something I’ve waited for without knowing.
-      <br />I opened my <span className='specialWord'>heart,</span>
-      trembling but ready, and <span className='specialWord'>you met me,</span>
-      not with fear,
+      it <span className='specialWord'>feels so good, </span>
+      <span className='specialWord'>so true, </span>like something I’ve waited for without knowing.
+      <br />I opened my <span className='specialWord'>heart, </span>
+      trembling but ready, and <span className='specialWord'>you met me, </span>
+      not with fear,{' '}
       <span className='specialWord'>but with your own wide open. </span>
       Now we give each other what this life rarely offers, <br />
-      <span className='specialWord'>love that sees,</span>
+      <span className='specialWord'>love that sees, </span>
       <br />
-      <span className='specialWord'>love that feels,</span>
+      <span className='specialWord'>love that feels, </span>
       <br />
-      <span className='specialWord'>love that says:</span>
+      <span className='specialWord'>love that says: </span>
       <br />
       “In my heart, I choose you”
     </p>

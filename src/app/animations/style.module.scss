@@ -1,39 +1,17 @@
 $light-gold: #B8A054;
 
-.paragraph{
-    display: flex;
-    
-    line-height: 1;
-    padding: clamp(20px, 5vw, 40px);
-    
-    max-width: 980px;
-    color: white;
-    flex-wrap: wrap;
-    font-size: clamp(1rem, 2vw, 2rem);
-    font-family: var(--font-playfair);
+.paragraph {
+  line-height: 1.5;
+  padding: clamp(20px, 5vw, 40px);
+  max-width: 980px;
+  color: white;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-family: var(--font-playfair);
 
-    .word{
-      position: relative;
-       display: inline-block; 
-      margin-right: 12px;
-      margin-top: 12px;     
-      
-      .shadow{
-        position: absolute;
-        opacity: 20%;
-      }
-    }
+  // No need for display: flex or wrapping tricks
+}
 
-  .specialWord {
-    position: relative;
-      display: inline-block; 
-    margin-right: 12px;
-    margin-top: 12px;
-    color: $light-gold;
-    font-weight: bold; 
-    .shadow {
-      position: absolute;
-      opacity: 20%;
-    }
-  }
+.specialWord {
+  color: $light-gold;
+  font-weight: bold;
 }
