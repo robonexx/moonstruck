@@ -101,3 +101,24 @@ body {
   min-height: 100svh;
 }
 
+
+.font-main {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  font-weight: $font-normal;
+}
+.font-headline {
+  font-family: $font-headline;
+  font-size: $font-size-xxxl;
+  font-weight: $font-bold;
+}
+.font-alt {
+  font-family: $font-alt;
+  font-size: $font-size-base;
+  font-weight: $font-normal;
+}
+.font-secondary {
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  font-weight: $font-normal;
+}

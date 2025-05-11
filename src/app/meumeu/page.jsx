@@ -5,6 +5,21 @@ import './meumeu.scss';
 import Body1 from '@/components/Body1';
 import Body2 from '@/components/Body2';
 import Body3 from '@/components/Body3';
+import ParagraphWord from '../animations/ParagraphWord';
+
+const para1 = () => {
+  return (
+    <>
+      <p>Meu <span>coração</span>❤️ then some other text <span>Hightligted text</span> and so on</p>
+    </>
+  );
+}
+
+const paragraph =
+  'Your #voice# is the #place# , my #soul# remembers how to #breathe#';
+
+const paragraph2 =
+  'Her voice calms me, It settles the noise inside. It warms my heart,Calms my breath. I could listen to her forever,It is not what she says, It is the way it feels when she speaks,like everything is going to be okay.';
 
 const Meumeu = () => {
   const ref1 = useRef(null);
@@ -42,6 +57,8 @@ const Meumeu = () => {
           <Body1 />
         </section>
       </div>
+       <ParagraphWord paragraph={paragraph} />
+        <div style={{ height: '5vh' }}></div>
       <section>
         <motion.h2
           ref={ref3}
@@ -53,6 +70,11 @@ const Meumeu = () => {
         </motion.h2>
         <Body3 />
       </section>
+      <section>
+        <ParagraphWord paragraph={paragraph2} />
+        <div style={{ height: '5vh' }}></div>
+      </section>
+      <div style={{ height: '50vh' }}>...❤️❤️❤️...</div>
     </div>
   );
 };

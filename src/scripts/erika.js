@@ -27,6 +27,36 @@ safe,
 present,  
 real.`,
 
+  `Você é a coisa mais linda deste mundo.`,
+
+  `First You made my morning coffee taste better,
+Then You took time,
+not because you had to,
+but because you wanted to.
+And that simple act,
+meant so much to me,
+Thank you for being you`,
+
+  `Erika... du tog dig tid, 
+inte för att du måste, 
+utan för att du ville. 
+Bara för att vara nära mig.  💞
+Idag... I  den stunden
+insåg jag hur länge sen det var 
+någon valde mig 
+på det sättet.
+
+Utan att du försöker 
+kommer du djupare 
+för var dag 
+in i mitt hjärta ❤️`,
+
+  `I didn’t ask. 
+She just wanted to be there. 
+And I realized… 
+I can’t remember the last time 
+someone chose me that way.`,
+
   `When i look in to her eyes, i feel the light of the moon touching my soul`,
 
   `Her touch wasn’t a question, 
@@ -43,17 +73,47 @@ but holding her with presence,
 and trusting the flow 
 that brought her to me.`,
 
+  `And in those small moments,  
+when she shows she cares,  
+I remember what love is supposed to feel like,
+safe,  
+present,  
+real.`,
+
   `Nothing else existed...
 just her warmth, 
 her heartbeat, 
 her love 
 wrapped around mine.`,
 
+  `Believe the quiet thinker who says they care,  they’ve doubted every feeling, questioned every motive, and still chose you`,
+
+  `...I’m not afraid of falling anymore.
+Because every time I land next to you,
+it feels like I’ve come home...
+and every time,
+I fall deeper in love with you`,
+
+  `Each morning,  
+my coffee carries her touch, 
+a quiet reminder  
+that I’m loved,  
+even in the smallest things.`,
+
   `Inget annat fanns Erika,
 bara din värme,
 Ditt hjärtas slag,
 Din kärlek
 omsorgsfullt svept runt mitt hjärta. 💞`,
+
+  `Hon är som balsam för själen 
+och bomull för hjärtat. 
+
+Hennes närhet dämpar världen, 
+hennes röst stillar stormen. 
+
+Jag visste inte att trygghet kunde låta så, 
+förrän jag hörde henne andas nära mig.`,
 
   `Your voice is the place  
 my soul remembers how to breathe.`,
@@ -391,20 +451,6 @@ Only hidden in tides I could not see.
 And somewhere deeper than goodbye,
 We touched, we held, we learned to fly.`,
 
-  `As we stand in the full moon’s glow,
-I think of a soul I used to know
-The warmth of the sun in her gentle smile,
-moonglow eyes that stayed awhile
-We met beneath that silver tide,
-a fleeting spark the night would hide
-
-If you happen to look up and feel something unknown…
-It's just the universe, reminding you:
-You’re never truly alone
-
-No matter the distance, or how paths bend,
-I still wish you peace, and love, my friend`,
-
   `I send you light through distant skies
 Rest, renew, and softly mend,
 My heart is with you, my spirit I send ❤️`,
@@ -464,4 +510,35 @@ But I can feel it.
 I can sense it.
 
 Only future will tell`,
+];
+
+export const fullmoonQuotes = [
+  `Beneath the full moon's light,  
+we found each other deep in the night.  
+Now no longer just dreams or distant skies,  
+Present, bonding souls and meeting eyes.  
+
+Your gaze holds stars, you pull me near,  
+the world grows still when you are here.  
+In your touch, I feel the truth,
+a love that blooms beyond our past youth.  
+
+No need for promises carved in stone,  
+when presence says: you're not alone.  
+In your arms, I’ve come to know, 
+we are the magic in the fullmoon’s glow.`,
+
+  `As we stand in the full moon’s glow,
+I think of a soul I used to know
+The warmth of the sun in her gentle smile,
+moonglow eyes that stayed awhile
+We met beneath that silver tide,
+a fleeting spark the night would hide
+
+If you happen to look up and feel something unknown…
+It's just the universe, reminding you:
+You’re never truly alone
+
+No matter the distance, or how paths bend,
+I still wish you peace, and love, my friend`,
 ];
