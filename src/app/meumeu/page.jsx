@@ -12,7 +12,7 @@ const para1 = (
     <p>
       Your <span className='specialWord'>voice </span>is the special
       <span className='specialWord'> place,</span> where my
-      <span className='specialWord'>soul</span> remembers how to
+      <span className='specialWord'> soul</span> remembers how to
       <span className='specialWord'> breathe</span>
     </p>
   </ParagraphWord>
