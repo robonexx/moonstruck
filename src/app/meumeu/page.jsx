@@ -44,6 +44,9 @@ const para2 = (
   </ParagraphWord>
 );
 
+const radius = 60; // radius of circle
+const duration = 4; // seconds
+
 const Meumeu = () => {
   const ref1 = useRef(null);
   const inView1 = useInView(ref1, { once: true });
@@ -53,6 +56,21 @@ const Meumeu = () => {
 
   const ref3 = useRef(null);
   const inView3 = useInView(ref3, { once: true });
+
+  const ref4 = useRef(null);
+  const inView4 = useInView(ref4, { once: true });
+
+  const ref5 = useRef(null);
+  const inView5 = useInView(ref5, { once: true });
+
+  const ref6 = useRef(null);
+  const inView6 = useInView(ref6, { once: true });
+
+  const ref7 = useRef(null);
+  const inView7 = useInView(ref7, { once: true });
+
+  const ref8 = useRef(null);
+  const inView8 = useInView(ref8, { once: true });
 
   return (
     <div className='main'>
@@ -93,7 +111,98 @@ const Meumeu = () => {
         <Body3 />
       </section>
       <section>{para2}</section>
-      <div style={{ height: '50vh' }}>...❤️❤️❤️...</div>
+      <div className='bottom'>
+        {/* <h2>
+          Você é minha lua <motion.span
+           ref={ref5}
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView5 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.5, delay: 0.3 }}>🌕</motion.span>
+        </h2>
+        <h2>
+          E eu sou seu sol <motion.span
+           ref={ref6}
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView5 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.5, delay: 0.3 }}>☀️</motion.span>
+        </h2> */}
+        <h2>
+          Você é minha lua{' '}
+          <motion.span
+            ref={ref5}
+            initial={{ x: 0, y: 0, rotate: 0, opacity: 0 }}
+            animate={
+              inView5
+                ? {
+                    x: [0, 70, 140, 70, 0],
+                    y: [0, -70, 0, 70, 0],
+                    rotate: [0, 90, 180, 270, 360],
+                    opacity: 1,
+                  }
+                : { opacity: 0 }
+            }
+            transition={{
+              duration: 4,
+              ease: 'easeInOut',
+              times: [0, 0.25, 0.5, 0.75, 1],
+            }}
+          >
+            🌕
+          </motion.span>
+        </h2>
+
+        <h2>
+          E eu sou seu sol{' '}
+          <motion.span
+            ref={ref5}
+            initial={{ x: 140, y: 0, rotate: 0, opacity: 0 }}
+            animate={
+              inView5
+                ? {
+                    x: [140, 70, 0, 70, 140, 0],
+                    y: [0, 70, 0, -70, 0],
+                    rotate: [0, 90, 180, 270, 360],
+                    opacity: 1,
+                  }
+                : { opacity: 0 }
+            }
+            transition={{
+              duration: 4,
+              ease: 'easeInOut',
+              times: [0, 0.25, 0.5, 0.75, 1],
+            }}
+          >
+            ☀️
+          </motion.span>
+        </h2>
+
+        <p>
+          <motion.span
+            ref={ref6}
+            initial={{ opacity: 0 }}
+            animate={inView6 ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 1, delay: 3.6, ease: 'easeInOut' }}
+          >
+            ❤️
+          </motion.span>
+          <motion.span
+            ref={ref7}
+            initial={{ opacity: 0 }}
+            animate={inView7 ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 1, delay: 3.8, ease: 'easeInOut' }}
+          >
+            ❤️
+          </motion.span>
+          <motion.span
+            ref={ref8}
+            initial={{ opacity: 0 }}
+            animate={inView8 ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 1, delay: 4, ease: 'easeInOut' }}
+          >
+            ❤️
+          </motion.span>
+        </p>
+      </div>
     </div>
   );
 };
