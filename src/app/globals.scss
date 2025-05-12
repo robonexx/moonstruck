@@ -102,6 +102,7 @@ body {
   color: rgb(var(--foreground-rgb));
    -webkit-font-smoothing: antialiased;
   min-height: 100svh;
+  max-width: 100%;
   font-family: $font-text;
 
   background: linear-gradient(99.9deg, rgb(30, 23, 32) 21.2%, rgb(39, 13, 62) 84.8%);
