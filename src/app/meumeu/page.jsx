@@ -13,7 +13,7 @@ const para1 = (
       Your <span className='specialWord'>voice </span>is the special
       <span className='specialWord'> place,</span> where my
       <span className='specialWord'>soul</span> remembers how to
-      <span className='specialWord'>breathe</span>
+      <span className='specialWord'> breathe</span>
     </p>
   </ParagraphWord>
 );
@@ -26,7 +26,8 @@ const para2 = (
       reminds me, it’s <span className='specialWord'>real. </span>
       And maybe that’s what makes it scary, not because I doubt it, but because
       it <span className='specialWord'>feels so good, </span>
-      <span className='specialWord'>so true, </span>like something I’ve waited for without knowing.
+      <span className='specialWord'>so true, </span>like something I’ve waited
+      for without knowing.
       <br />I opened my <span className='specialWord'>heart, </span>
       trembling but ready, and <span className='specialWord'>you met me, </span>
       not with fear,{' '}
