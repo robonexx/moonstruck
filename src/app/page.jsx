@@ -7,7 +7,6 @@ import { quotes, deepQuotes, fullmoonQuotes } from '@/scripts/erika';
 import { initSky } from '@/scripts/sky';
 import './page.scss';
 
-
 const Home = () => {
   const [showLoadingSection, setShowLoadingSection] = useState(true);
   const { setSize } = useContext(CursorContext);
@@ -129,6 +128,15 @@ const Home = () => {
     <main className='main'>
       <div className='overlay'></div>
       <div className='underlay'></div>
+      <button
+        onClick={() => {
+          localStorage.setItem('showSplashAgain', 'true');
+          window.location.reload(); // This will reload and RootLayout will see the flag
+        }}
+        className='see-intro-again-button'
+      >
+        See Intro Again
+      </button>
 
       <svg
         className='erika'

@@ -34,6 +34,14 @@ const Splash = () => {
     }
   };
 
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    localStorage.removeItem('showSplashAgain'); // clear flag after splash shown
+    setShowLoadingSection(false);
+  }, 6000);
+  return () => clearTimeout(timer);
+}, []);
+
   return (
     <div className='w-screen max-h-screen overflow-hidden p-40 absolute top-0 left-0'>
       <AnimatePresence mode='wait'>

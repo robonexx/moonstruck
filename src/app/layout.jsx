@@ -25,14 +25,25 @@ const playfair = Playfair_Display({
 export default function RootLayout({ children }) {
   const [authenticated, setAuthenticated] = useState(false);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const isAuthenticated = localStorage.getItem('authenticated');
     if (isAuthenticated === 'true') {
       setAuthenticated(true);
     } else {
       setAuthenticated(false);
     }
-  }, []);
+  }, []); */
+  useEffect(() => {
+  const isAuthenticated = localStorage.getItem('authenticated');
+  const showSplashAgain = localStorage.getItem('showSplashAgain');
+
+  if (showSplashAgain === 'true') {
+    // temporarily treat it as not authenticated to show splash
+    setAuthenticated(false);
+  } else {
+    setAuthenticated(isAuthenticated === 'true');
+  }
+}, []);
   return (
     <html lang='en'>
       <body className={` ${fira.variable} ${playfair.variable} antialiased`}>
