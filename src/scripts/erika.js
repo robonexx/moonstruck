@@ -1,5 +1,36 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
+  `Jag har ingen aning om hur universum fungerar, men på något sätt såg den till att vi träffades.
+Om det är skrivet i stjärnorna, eller genom månens magi, kommer vi aldrig veta.
+Inget av det mystiska spelar egentligen roll, för när jag ser i dina ögon, håller dig nära och känner din energi, hur vi dras till varandra.
+Oavsett vad det är... och även om läskigt, så känns det bara helt naturligt och rätt. Som att vi var menade att just i denna stund i livet dela vår kärlek...
+Du & Jag 💕`,
+
+  ` can’t get enough of you. 
+Your voice could fill my days, 
+your eyes sees my soul
+
+When we just sit, 
+Talking, just feeling, connecting,
+it’s like time holds its breath 
+so our energies can speak instead...
+
+That feeling, I could stay there an eternity`,
+
+  `Under the fullmoon,
+We often walk alone, yet not alone. 
+
+I felt you. 
+Low tide in your soul. 
+And though no words were said, 
+the moon whispered your silence to me. 
+
+We are healing, 
+two hearts once closed, now opening,
+slowly, 
+bravely, 
+together.`,
+
   `Sanoitta, tunnet minua.  
 Katseella, silität haavojani.  
 Läsnäolollasi,  

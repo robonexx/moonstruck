@@ -6,6 +6,7 @@ import Body1 from '@/components/Body1';
 import Body2 from '@/components/Body2';
 import Body3 from '@/components/Body3';
 import ParagraphWord from '../animations/ParagraphWord';
+import Coffee from '@/components/coffee/Coffee';
 
 const para1 = (
   <ParagraphWord>
@@ -40,6 +41,25 @@ const para2 = (
       <span className='specialWord'>love that says: </span>
       <br />
       “In my heart, I choose you”
+    </p>
+  </ParagraphWord>
+);
+
+const para3 = (
+  <ParagraphWord>
+    <p>
+      First, you filled my mornings with{' '}
+      <span className='specialWord'>love</span> by turning my{' '}
+      <span className='specialWord'>coffee </span>
+      into something that reminded me of{' '}
+      <span className='specialWord'>you. </span>
+      Then, you took <span className='specialWord'>time from your day, </span>
+      not out of obligation, But to{' '}
+      <span className='specialWord'>be with me, </span> meeting me halfway And
+      in that <span className='specialWord'>moment </span>, I felt the beauty of{' '}
+      <span className='specialWord'>being chosen, </span>
+      in the quietest, most meaningful way. Thank you, for simply{' '}
+      <span className='specialWord'>being you. ❤️</span>
     </p>
   </ParagraphWord>
 );
@@ -111,21 +131,10 @@ const Meumeu = () => {
         <Body3 />
       </section>
       <section>{para2}</section>
+       <Coffee />
+      <section>{para3}</section>
+     
       <div className='bottom'>
-        {/* <h2>
-          Você é minha lua <motion.span
-           ref={ref5}
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView5 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.5, delay: 0.3 }}>🌕</motion.span>
-        </h2>
-        <h2>
-          E eu sou seu sol <motion.span
-           ref={ref6}
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView5 ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.5, delay: 0.3 }}>☀️</motion.span>
-        </h2> */}
         <h2>
           Você é minha lua{' '}
           <motion.span
