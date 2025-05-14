@@ -5,6 +5,7 @@ import { CursorContext } from '@/components/Cursor/CursorProvider';
 import { getMoonPhase, swedenFullMoons2025 } from '@/scripts/moon';
 import { quotes, deepQuotes, fullmoonQuotes } from '@/scripts/erika';
 import { initSky } from '@/scripts/sky';
+import {motion} from 'framer-motion';
 import './page.scss';
 
 const Home = () => {

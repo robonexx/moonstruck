@@ -351,15 +351,16 @@ $gr-clr-pinkdreams: linear-gradient(to right, #FFA69E, #861657);
 
 .erika {
   position: absolute;
-  top: 12%;
+  top: 50vh;
   left: 57.25%;
   transform: translate(-50%, -50%) scale(0.4) rotate(10deg);
-  stroke: rgba(0, 0, 0, 0.219);
+  stroke: rgb(255, 255, 255);
   animation: erika 60s linear forwards 2s infinite;
+  z-index: 1000;
 }
 
 svg.erika path {
-  fill: rgba(0, 0, 0, 0.192);
+  fill: rgba(0, 0, 0, 0.142);
 }
 
 
