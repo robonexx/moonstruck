@@ -245,11 +245,11 @@ const Home = () => {
       </div>
 
       <div className='button-wrapper'>
-        <button ref={deepBtnRef} className='deep-btn' disabled>
-          It’s safe, share the deeper ones
-        </button>
         <button ref={oneMoreBtnRef} className='deep-btn'>
-          One more
+          Mer kärlek tack!
+        </button>
+        <button ref={deepBtnRef} className='deep-btn' disabled>
+          Djupare! men inte än...
         </button>
       </div>
     </main>
