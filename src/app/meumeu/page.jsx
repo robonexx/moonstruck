@@ -52,13 +52,13 @@ const para3 = (
       <span className='specialWord'>love</span> by turning my{' '}
       <span className='specialWord'>coffee </span>
       into something that reminded me of{' '}
-      <span className='specialWord'>you. </span>
+      <span className='specialWord'>you. </span> <br />
       Then, you took <span className='specialWord'>time from your day, </span>
       not out of obligation, But to{' '}
       <span className='specialWord'>be with me, </span> meeting me halfway And
       in that <span className='specialWord'>moment </span>, I felt the beauty of{' '}
       <span className='specialWord'>being chosen, </span>
-      in the quietest, most meaningful way. Thank you, for simply{' '}
+      in the quietest, most meaningful way. <br /> Thank you, for simply{' '}
       <span className='specialWord'>being you. ❤️</span>
     </p>
   </ParagraphWord>
@@ -131,9 +131,11 @@ const Meumeu = () => {
         <Body3 />
       </section>
       <section>{para2}</section>
-       <Coffee />
-      <section>{para3}</section>
-     
+      <div className='wrapper'>
+        <Coffee />
+        {para3}
+      </div>
+
       <div className='bottom'>
         <h2>
           Você é minha lua{' '}

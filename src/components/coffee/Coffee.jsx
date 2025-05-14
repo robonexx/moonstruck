@@ -25,8 +25,8 @@ export default function Coffee() {
     <motion.div>
       <div className='svg-container' ref={ref}>
         <motion.svg
-          id='coffee'
-          viewBox='0 0 1400 1000'
+          className='coffee'
+           viewBox='0 0 1400 1000'
           fill='none'
         >
           <motion.path
