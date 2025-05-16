@@ -1,11 +1,21 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
+  `Sometimes,  
+we become two mischievous souls,  
+laughing, touching,  
+doing things a little out of the ordinary.  
+
+But that’s the beauty of us,  
+we’re not an ordinary love.  
+We’re wild in spirit,  
+tender at heart,  
+and free when we’re together.`,
 
   `Planer ändrades, och det är okej.  
 Jag är inte här för att ta plats,  
 bara för att erbjuda min.  
 Ingen press. Bara kärlek.`,
-  
+
   `The most beautiful thing 
 is seeing you happy,
 when your smile meets my eyes, 
@@ -15,15 +25,14 @@ That’s where I want to be,
 again and again, 
 as we move forward, 
 together.`,
-  
+
   `When you hug me, it's like magic.
 I become a superhero that could take on the world.
 That is what a womans love should feel like,
 and I get that from you`,
-  
+
   `Your scent lingers deep in to my soul everytime we are close`,
 
-  
   `I hope I raise goosebumps on your soul, the way you do on mine.`,
 
   `Jag saknar din doft,
@@ -32,12 +41,12 @@ Helst av allt,
 vill jag bara stanna där, 
 i doften av dig, 
 och inte gå någonstans.`,
-  
+
   `Mitt hjärta, min måne,
 När du inte är här, saknar jag dig.
 Jag vill hålla om dig, kyssa dig,
 Och aldrig någonsin släppa taget.`,
-  
+
   `I can’t get enough of you. 
 Your voice could fill my days, 
 your eyes sees my soul
