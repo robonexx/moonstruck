@@ -1,5 +1,11 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
+
+  `Planer ändrades, och det är okej.  
+Jag är inte här för att ta plats,  
+bara för att erbjuda min.  
+Ingen press. Bara kärlek.`,
+  
   `The most beautiful thing 
 is seeing you happy,
 when your smile meets my eyes, 
