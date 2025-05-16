@@ -1,12 +1,38 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
-  `Jag har ingen aning om hur universum fungerar, men på något sätt såg den till att vi träffades.
-Om det är skrivet i stjärnorna, eller genom månens magi, kommer vi aldrig veta.
-Inget av det mystiska spelar egentligen roll, för när jag ser i dina ögon, håller dig nära och känner din energi, hur vi dras till varandra.
-Oavsett vad det är... och även om läskigt, så känns det bara helt naturligt och rätt. Som att vi var menade att just i denna stund i livet dela vår kärlek...
-Du & Jag 💕`,
+  `The most beautiful thing 
+is seeing you happy,
+when your smile meets my eyes, 
+a whole new universe opens up. 
 
-  ` can’t get enough of you. 
+That’s where I want to be, 
+again and again, 
+as we move forward, 
+together.`,
+  
+  `When you hug me, it's like magic.
+I become a superhero that could take on the world.
+That is what a womans love should feel like,
+and I get that from you`,
+  
+  `Your scent lingers deep in to my soul everytime we are close`,
+
+  
+  `I hope I raise goosebumps on your soul, the way you do on mine.`,
+
+  `Jag saknar din doft,
+hur den väcker något djupt i mig. 
+Helst av allt,
+vill jag bara stanna där, 
+i doften av dig, 
+och inte gå någonstans.`,
+  
+  `Mitt hjärta, min måne,
+När du inte är här, saknar jag dig.
+Jag vill hålla om dig, kyssa dig,
+Och aldrig någonsin släppa taget.`,
+  
+  `I can’t get enough of you. 
 Your voice could fill my days, 
 your eyes sees my soul
 
@@ -16,6 +42,12 @@ it’s like time holds its breath
 so our energies can speak instead...
 
 That feeling, I could stay there an eternity`,
+
+  `Jag har ingen aning om hur universum fungerar, men på något sätt såg den till att vi träffades.
+Om det är skrivet i stjärnorna, eller genom månens magi, kommer vi aldrig veta.
+Inget av det mystiska spelar egentligen roll, för när jag ser i dina ögon, håller dig nära och känner din energi, hur vi dras till varandra.
+Oavsett vad det är... och även om läskigt, så känns det bara helt naturligt och rätt. Som att vi var menade att just i denna stund i livet dela vår kärlek...
+Du & Jag 💕`,
 
   `Under the fullmoon,
 We often walk alone, yet not alone. 
@@ -609,6 +641,22 @@ we are the magic in the fullmoon’s glow.`,
 ];
 
 /* 
+I don’t care who held you first, 
+or who held you the longest. 
+
+Truth is...
+you shine brighter beside me. 
+You laugh louder, 
+breathe softer, 
+love deeper. 
+
+I’ll hold your heart with hands 
+In away no one has done. 
+Gentle, real, 
+and ready to love you 
+the way you always deserved.
+
+
  `As we stand in the full moon’s glow,
 I think of a soul I used to know
 The warmth of the sun in her gentle smile,
