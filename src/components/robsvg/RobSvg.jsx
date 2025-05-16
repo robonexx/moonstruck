@@ -1,51 +1,86 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import anime from 'animejs';
+'use client';
+import React, { useCallback, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 import './robsvg.scss';
 import useMediaQuery from '@/hooks/useMediaQuery';
+
+gsap.registerPlugin(MorphSVGPlugin);
 
 const RobSvg = () => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   const Animate = useCallback(() => {
-    const timeline = anime.timeline({
-      targets: '.intro',
-      duration: 1000,
-      easing: 'easeOutSine',
-    });
-    timeline
-      .add({
-        targets: '.rob .lines path',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 2000,
-        stroke: '#888',
-        delay: function (el, i) {
-          return i * 100;
-        },
-        direction: 'forwards',
-        loop: false,
-        height: 400,
-      })
-      .add({
-        targets: '.eye',
-        d: [eyeOpen, eyeClosed, eyeOpen],
-        easing: 'easeInOutSine',
-        delay: 400,
-        duration: 500,
-      })
+    // Ensure black background during intro
+    gsap.set('.intro', { backgroundColor: '#000' });
 
-      .add({
-        targets: '.rob',
+    // Prepare stroke drawing on paths
+    const paths = document.querySelectorAll('.rob .lines path');
+    paths.forEach((path) => {
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+    });
+
+    // Create timeline and remove intro on complete
+    const tl = gsap.timeline({
+      onComplete: () => {
+        const intro = document.querySelector('.intro');
+        if (intro && intro.parentNode) intro.parentNode.removeChild(intro);
+      }
+    });
+
+    // 1) Draw lines with stagger
+    tl.to(paths, {
+      strokeDashoffset: 0,
+      duration: 2,
+      ease: 'power1.inOut',
+      stagger: 0.1,
+    });
+
+    // 2) Blink eye via MorphSVGPlugin
+    tl.to(
+      '.eye',
+      {
+        morphSVG: eyeClosed,
+        duration: 0.5,
+        ease: 'power1.inOut',
+        yoyo: true,
+        repeat: 1,
+      },
+      '>-0.5'
+    );
+
+    // 3) Shrink and fade robot
+    tl.to(
+      '.rob',
+      {
         scale: 0.3,
-        left: isDesktop ? '-400px' : '-100px',
-        top: isDesktop ? '2rem' : '1rem',
+        x: isDesktop ? -400 : -100,
+        y: isDesktop ? '2rem' : '1rem',
         width: 120,
         height: 120,
-        direction: 'forwards',
-        duration: 800,
         opacity: 0,
-      });
-  }, []);
+        ease: 'power1.out',
+        duration: 0.8,
+      },
+      '>'
+    );
+
+    // 4) Fade out intro container entirely
+    tl.to(
+      '.intro',
+      { autoAlpha: 0, duration: 0.5, ease: 'power1.out' }
+    );
+
+    // Remove intro from DOM after animation completes
+    tl.eventCallback('onComplete', () => {
+      const intro = document.querySelector('.intro');
+      if (intro && intro.parentNode) {
+        intro.parentNode.removeChild(intro);
+      }
+    });
+  }, [isDesktop]);
 
   useEffect(() => {
     Animate();

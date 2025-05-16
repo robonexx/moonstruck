@@ -7,6 +7,7 @@ import { quotes, deepQuotes, fullmoonQuotes } from '@/scripts/erika';
 import { initSky } from '@/scripts/sky';
 import { motion } from 'framer-motion';
 import './page.scss';
+import RobSvg from '@/components/robsvg/RobSvg';
 
 const Home = () => {
   const [showLoadingSection, setShowLoadingSection] = useState(true);
@@ -147,6 +148,7 @@ const Home = () => {
 
   return (
     <main className='main'>
+      <RobSvg />
       <div className='overlay'></div>
       <div className='underlay'></div>
       <button

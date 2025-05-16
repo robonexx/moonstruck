@@ -22,6 +22,7 @@
 
     .rob {
         position: absolute;
+        z-index: 1000;
         top: 10vh;
         width: 100%;
         @media (min-width: 768px) {
