@@ -20,6 +20,13 @@ vill jag njuta av allt vi är.
 För just nu i vår kärlek…
 känner jag att det är dig 
 jag vill vara med.`,
+  
+  `When you hug me, it's like magic.
+I become a superhero that could take on the world.
+That is what a womans love should feel like,
+and I get that from you`,
+  
+  ``,
 
   `Sometimes,  
 we become two mischievous souls,  
@@ -677,7 +684,47 @@ we are the magic in the fullmoon’s glow.`,
 ];
 
 /* 
-I don’t care who held you first, 
+´Det jag skriver till dig
+är mer än bara ord.
+Det är tankar som alltid finns,
+känslor som behöver komma ut.
+
+Jag skriver för att förstå,
+för att minnas,
+för att fånga det som är så lätt att förlora i vardagen,
+blickar, andetag, känslan när du säger mitt namn.
+
+En dag kanske vi bläddrar tillbaka,
+ser hur kärleken växte,
+hur jag valde dig
+om och om igen.
+
+För det jag känner för dig,
+har varit,
+är nu,
+och kanske…
+kommer alltid att vara.`
+
+
+`Jag förstår dig,
+vissa steg tar tid, 
+och det är helt okej. 
+
+Jag är inte här för att skynda dig, 
+utan för att vara med dig, 
+Allt har sin tid,
+när du är redo, 
+på ditt sätt, 
+i din takt. 
+
+För mig känns det redan som en dröm, 
+att få vara nära dig,
+hålla dig i min famn,
+så som jag får nu. 
+Och det är redan en livs bonus.`
+
+
+`I don’t care who held you first, 
 or who held you the longest. 
 
 Truth is...
@@ -690,7 +737,7 @@ I’ll hold your heart with hands
 In away no one has done. 
 Gentle, real, 
 and ready to love you 
-the way you always deserved.
+the way you always deserved.`
 
 
  `As we stand in the full moon’s glow,
