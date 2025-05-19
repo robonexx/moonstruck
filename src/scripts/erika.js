@@ -1,5 +1,26 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
+  `Wow! Vilken helg,
+kändes som en dröm. 
+Sån där man inte vill vakna ifrån, 
+bara stanna kvar i, 
+njuta,  andas in varje ögonblick. 
+
+Ibland önskar jag att man kunde stoppa tiden,
+när vi skrattar, 
+håller varandras händer, 
+kramas,  kysser, myser,
+när din hud möter min. 
+
+De stunderna betyder mer för mig 
+än något annat just nu. 
+Och så länge vi bär varandras kärlek, 
+vill jag njuta av allt vi är. 
+
+För just nu i vår kärlek…
+känner jag att det är dig 
+jag vill vara med.`,
+
   `Sometimes,  
 we become two mischievous souls,  
 laughing, touching,  
