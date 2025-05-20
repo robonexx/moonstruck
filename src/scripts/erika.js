@@ -27,12 +27,32 @@ För just nu i vår kärlek…
 känner jag att det är dig 
 jag vill vara med.`,
 
+  `Det finns inget bättre
+än att skratta med dig,
+när ditt skratt tar över allt,
+där orden försvinner
+och bara glädjen finns
+
+I de stunderna
+känns allting lättare,
+världen blir mjukare,
+och det är bara vi
+
+Inget förflutet, ingen framtid,
+bara nu i stunden
+Och sättet du ser på mig mitt i skrattet…
+det är en sorts magi jag vill ha mer av`,
+
   `When you hug me, it's like magic.
 I become a superhero that could take on the world.
 That is what a womans love should feel like,
 and I get that from you`,
 
-  ``,
+  `Vi bär alla bagage från tidigare liv,
+jag vill inte att vi snubblar över varandras.
+Låt oss packa upp det förflutna i takt,
+och fylla väskorna med något nytt,
+för just den här resan vill jag göra med dig`,
 
   `Sometimes,  
 we become two mischievous souls,  
