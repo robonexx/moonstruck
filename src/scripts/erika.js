@@ -6,6 +6,22 @@ Våra vägar korsades mitt i stadens sus & brus,
 en minut, ett kort stund,
 och plötsligt bar resten av dagen din kärleks doft 💕`,
 
+  `Det finns inget bättre
+än att skratta med dig,
+när ditt skratt tar över allt,
+där orden försvinner
+och bara glädjen finns
+
+I de stunderna
+känns allting lättare,
+världen blir mjukare,
+och det är bara vi
+
+Inget förflutet, ingen framtid,
+bara nu i stunden
+Och sättet du ser på mig mitt i skrattet…
+det är en sorts magi jag vill ha mer av`,
+
   `Wow! Vilken helg,
 kändes som en dröm. 
 Sån där man inte vill vakna ifrån, 
@@ -26,22 +42,6 @@ vill jag njuta av allt vi är.
 För just nu i vår kärlek…
 känner jag att det är dig 
 jag vill vara med.`,
-
-  `Det finns inget bättre
-än att skratta med dig,
-när ditt skratt tar över allt,
-där orden försvinner
-och bara glädjen finns
-
-I de stunderna
-känns allting lättare,
-världen blir mjukare,
-och det är bara vi
-
-Inget förflutet, ingen framtid,
-bara nu i stunden
-Och sättet du ser på mig mitt i skrattet…
-det är en sorts magi jag vill ha mer av`,
 
   `When you hug me, it's like magic.
 I become a superhero that could take on the world.
