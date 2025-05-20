@@ -1,5 +1,11 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
+  `Vi skulle inte ses,
+men trafik kaoset förde oss samman ändå.
+Våra vägar korsades mitt i stadens sus & brus,
+en minut, ett kort stund,
+och plötsligt bar resten av dagen din kärleks doft 💕`,
+
   `Wow! Vilken helg,
 kändes som en dröm. 
 Sån där man inte vill vakna ifrån, 
@@ -20,12 +26,12 @@ vill jag njuta av allt vi är.
 För just nu i vår kärlek…
 känner jag att det är dig 
 jag vill vara med.`,
-  
+
   `When you hug me, it's like magic.
 I become a superhero that could take on the world.
 That is what a womans love should feel like,
 and I get that from you`,
-  
+
   ``,
 
   `Sometimes,  
