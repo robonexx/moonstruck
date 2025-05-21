@@ -409,15 +409,29 @@ svg.erika path {
   90%,100% { -webkit-opacity: 1; opacity: 1; -webkit-transform: scale(1.2); transform: scale(1.2); border-radius: 999999px;}
 }
 
-.imageHolder img {
+.imageHolder {
   position: absolute;
-  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1) rotate(10deg);
-  height: auto;
+  top: 17.5%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
   width: 220px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.imageHolder img {
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  background: transparent;
+  border-radius: 50%;
+  z-index: 1;
+  background: none;
 }
 
 .button-wrapper {
@@ -434,7 +448,7 @@ svg.erika path {
 
 @media (max-width: 768px) {
   .imageHolder img {
-    width: 170px;
+    width: 220px;
     height: auto;
   }
 

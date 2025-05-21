@@ -27,11 +27,12 @@ const Home = () => {
 
     const today = new Date();
     const todayISO = today.toISOString().split('T')[0];
-    const currentMoon = getMoonPhase(
+    /*  const currentMoon = getMoonPhase(
       today.getFullYear(),
       today.getMonth() + 1,
       today.getDate()
-    );
+    ); */
+    const currentMoon = getMoonPhase(today);
     setMoonPhase(currentMoon);
 
     const makeRotator = (arr, key) => {

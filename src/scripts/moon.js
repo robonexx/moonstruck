@@ -1,57 +1,55 @@
-// moon.js
-export const getMoonPhase = (yy, mm, dd) => {
-  if (mm < 3) {
-    yy--;
-    mm += 12;
-  }
-  mm++;
-  const c = 365.25 * yy;
-  const e = 30.6 * mm;
-  let jd = c + e + dd - 694039.09;
-  jd /= 29.5305882;
-  let b = parseInt(jd);
-  jd -= b;
-  b = Math.round(jd * 8);
-  if (b >= 8) b = 0;
+import SunCalc from 'suncalc';
 
-  const phases = [
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/newmoon.png',
-      phase: 'New Moon',
-    },
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxingcrescent.png',
-      phase: 'Waxing Crescent',
-    },
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/firstquarter.png',
-      phase: 'First Quarter',
-    },
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxinggibbous.png',
-      phase: 'Waxing Gibbous',
-    },
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/fullmoon.png',
-      phase: 'Full Moon',
-    },
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waninggibbous.png',
-      phase: 'Waning Gibbous',
-    },
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/lastquarter.png',
-      phase: 'Last Quarter',
-    },
-    {
-      src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waningcrescent.png',
-      phase: 'Waning Crescent',
-    },
-  ];
+const phases = [
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/newmoon.png',
+    phase: 'New Moon',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxingcrescent.png',
+    phase: 'Waxing Crescent',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/firstquarter.png',
+    phase: 'First Quarter',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waxinggibbous.png',
+    phase: 'Waxing Gibbous',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/fullmoon.png',
+    phase: 'Full Moon',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waninggibbous.png',
+    phase: 'Waning Gibbous',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/lastquarter.png',
+    phase: 'Last Quarter',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/tallulahh/moon-phase/main/waningcrescent.png',
+    phase: 'Waning Crescent',
+  },
+];
 
-  return phases[b];
+export const getMoonPhase = (date = new Date()) => {
+  const { phase } = SunCalc.getMoonIllumination(date);
+  const phaseIndex = (() => {
+    if (phase < 0.03 || phase > 0.97) return 0; // New Moon
+    if (phase < 0.22) return 1; // Waxing Crescent
+    if (phase < 0.28) return 2; // First Quarter
+    if (phase < 0.47) return 3; // Waxing Gibbous
+    if (phase < 0.53) return 4; // Full Moon
+    if (phase < 0.72) return 5; // Waning Gibbous
+    if (phase < 0.78) return 6; // Last Quarter
+    return 7; // Waning Crescent
+  })();
+
+  return phases[phaseIndex];
 };
-
 
 export const swedenFullMoons2025 = [
   '2025-01-14',
@@ -65,5 +63,5 @@ export const swedenFullMoons2025 = [
   '2025-09-07',
   '2025-10-07',
   '2025-11-05',
-  '2025-12-05'
+  '2025-12-05',
 ];
