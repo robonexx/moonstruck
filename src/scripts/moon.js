@@ -37,6 +37,7 @@ const phases = [
 
 export const getMoonPhase = (date = new Date()) => {
   const { phase } = SunCalc.getMoonIllumination(date);
+
   const phaseIndex = (() => {
     if (phase < 0.03 || phase > 0.97) return 0; // New Moon
     if (phase < 0.22) return 1; // Waxing Crescent
@@ -44,8 +45,8 @@ export const getMoonPhase = (date = new Date()) => {
     if (phase < 0.47) return 3; // Waxing Gibbous
     if (phase < 0.53) return 4; // Full Moon
     if (phase < 0.72) return 5; // Waning Gibbous
-    if (phase < 0.78) return 6; // Last Quarter
-    return 7; // Waning Crescent
+    if (phase < 0.78) return 7; // Waning Crescent
+    return 6; // Last Quarter
   })();
 
   return phases[phaseIndex];
