@@ -1,5 +1,26 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
+
+  `Det jag skriver till dig
+är mer än bara ord.
+Det är tankar som alltid finns,
+känslor som behöver komma ut.
+
+Jag skriver för att förstå,
+för att minnas,
+för att fånga det som är så lätt att förlora i vardagen,
+blickar, andetag, känslan när du säger mitt namn.
+
+En dag kanske vi bläddrar tillbaka,
+ser hur kärleken växte,
+hur jag valde dig
+om och om igen.
+
+För det jag känner för dig,
+har varit, är nu,
+och kanske…
+kommer alltid att vara. ❤️`,
+
   `Vi skulle inte ses,
 men trafik kaoset förde oss samman ändå.
 Våra vägar korsades mitt i stadens sus & brus,
@@ -710,26 +731,6 @@ we are the magic in the fullmoon’s glow.`,
 ];
 
 /* 
-´Det jag skriver till dig
-är mer än bara ord.
-Det är tankar som alltid finns,
-känslor som behöver komma ut.
-
-Jag skriver för att förstå,
-för att minnas,
-för att fånga det som är så lätt att förlora i vardagen,
-blickar, andetag, känslan när du säger mitt namn.
-
-En dag kanske vi bläddrar tillbaka,
-ser hur kärleken växte,
-hur jag valde dig
-om och om igen.
-
-För det jag känner för dig,
-har varit,
-är nu,
-och kanske…
-kommer alltid att vara.`
 
 
 `Jag förstår dig,

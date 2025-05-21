@@ -10,9 +10,12 @@ import Image from 'next/image';
 import styles from './ImageGallery.module.scss';
 
 const images = [
+  '/image21.webp',
   '/image10.webp',
   '/image2.webp',
   '/image3.webp',
+  '/image19.webp',
+  '/image20.webp',
   '/image4.webp',
   '/image5.webp',
   '/image7.webp',
