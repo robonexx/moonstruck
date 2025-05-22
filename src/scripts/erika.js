@@ -1,6 +1,14 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
 
+  `Jag faller djupare för varje dag,
+och om det fortsätter så här
+finns det ingen annan plats för mitt hjärta än med dig.
+Och om livet vill,
+så stannar vi där...
+tills vi en dag lämnar denna värld.
+Tack för att jag får en plats i ditt hjärta.`,
+
   `Det jag skriver till dig
 är mer än bara ord.
 Det är tankar som alltid finns,
