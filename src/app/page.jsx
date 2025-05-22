@@ -8,6 +8,7 @@ import { initSky } from '@/scripts/sky';
 import { motion } from 'framer-motion';
 import './page.scss';
 import RobSvg from '@/components/robsvg/RobSvg';
+import Flowers from '@/components/flowers';
 
 const Home = () => {
   const [showLoadingSection, setShowLoadingSection] = useState(true);
@@ -149,7 +150,8 @@ const Home = () => {
 
   return (
     <main className='main'>
-     {/*  <RobSvg /> */}
+      {/*  <RobSvg /> */}
+      <Flowers />
       <div className='overlay'></div>
       <div className='underlay'></div>
       <button
