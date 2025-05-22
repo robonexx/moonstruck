@@ -149,7 +149,7 @@ const Home = () => {
 
   return (
     <main className='main'>
-      <RobSvg />
+     {/*  <RobSvg /> */}
       <div className='overlay'></div>
       <div className='underlay'></div>
       <button
