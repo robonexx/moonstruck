@@ -1,13 +1,19 @@
 /* ---------- POEM LISTs ---------- */
 export const quotes = [
 
-  `Jag faller djupare för varje dag,
-och om det fortsätter så här
-finns det ingen annan plats för mitt hjärta än med dig.
-Och om livet vill,
-så stannar vi där...
-tills vi en dag lämnar denna värld.
-Tack för att jag får en plats i ditt hjärta.`,
+  `Att få träffa din mor,
+var inte bara ett möte, det var en ära.
+Det kändes som en stilla gest av förtroende,
+att bli presenterad för den som gett dig liv.
+
+Det säger mer än tusen ord,
+för jag vet i hjärtat att du inte hade gjort det
+om du inte såg något djupare i mig,
+något som kunde vara mer än bara en stund.
+
+Tack för att du släpper in mig,
+både i ditt liv och i din värld.
+Du betyder mer för mig än du kanske anar. ❤️`,
 
   `Det jag skriver till dig
 är mer än bara ord.
@@ -740,6 +746,13 @@ we are the magic in the fullmoon’s glow.`,
 
 /* 
 
+`Jag faller djupare för varje dag,
+och om det fortsätter så här
+finns det ingen annan plats för mitt hjärta än med dig.
+Och om livet vill,
+så stannar vi där...
+tills vi en dag lämnar denna värld.
+Tack för att jag får en plats i ditt hjärta.`,
 
 `Jag förstår dig,
 vissa steg tar tid, 
